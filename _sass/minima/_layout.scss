@@ -2,18 +2,16 @@
  * Site header
  */
 .site-header {
-  //border-top: 5px solid $grey-color-dark;
-  //border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-
-  // Positioning context for the mobile navigation icon
-  //position: relative;
-
-  border-bottom: 0px;
-
-  background-color: black;
-
-  
+    //border-top: 5px solid $grey-color-dark;
+    //border-bottom: 1px solid $grey-color-light;
+    height: $spacing-unit * 1.865;
+    // Positioning context for the mobile navigation icon
+    //position: relative;
+    border-bottom: 0px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .logo-wrapper
@@ -103,7 +101,7 @@
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  xline-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
@@ -118,7 +116,7 @@
 
 .site-title:hover
 {
-    color:red;
+    xcolor:red;
 }
 
 .social-media-list li
@@ -133,8 +131,11 @@ a.site-title
 }
 
 .site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+    float: right;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
   .nav-trigger {
       display: none;
@@ -220,6 +221,8 @@ a.site-title
   background-color: black;
 
   border-top: 1px solid grey;
+
+  background-image: linear-gradient(180deg, #000000, #2b0000);
 }
 
 .footer-heading {
@@ -375,3 +378,43 @@ a.post-link:hover, a.post-link:visited
 {
     color:#2a7ae2;
 }
+
+a.flip-animate {
+    perspective: 1000px;
+    
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 0;    
+      transition: transform 0.3s;
+      transform-origin: 50% 0;
+      transform-style: preserve-3d;
+    }
+    
+    span:before {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: attr(data-hover);
+      transition: color 0.3s;
+      transform: rotateX(-90deg);
+      transform-origin: 50% 0;
+      text-align: center;
+      color: transparent;
+      text-shadow: none;
+
+    }
+    
+    &:hover span,
+    &:focus span {
+      transform: rotateX(90deg) translateY(-22px);
+    }
+    
+    &:hover span:before,
+    &:focus span:before {
+      color: red;
+      text-shadow: inherit;
+    }
+  }
