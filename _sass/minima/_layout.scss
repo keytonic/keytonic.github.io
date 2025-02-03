@@ -8,7 +8,7 @@
     // Positioning context for the mobile navigation icon
     //position: relative;
     border-bottom: 0px;
-    background-color: black;
+    xbackground-color: black;
     xdisplay: flex;
     xflex-direction: row;
     xalign-items: center;
@@ -82,19 +82,21 @@
 
 .sticky
 {
+    transition: position 2s;
+
     position: sticky;
     top: 0;
     border-bottom: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.75);
-
-    text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+    xbackground-color: rgba(0, 0, 0, 0.75);
+    xbackground-image: linear-gradient(360deg, rgb(0 0 0 / 75%), rgb(43 0 0 / 75%));
+    xtext-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 
 
     .mylogo
     {
-        stroke: black;
-        stroke-width: 1px;
-        stroke-linejoin: round;
+        xstroke: black;
+        xstroke-width: 1px;
+        xstroke-linejoin: round;
     }
 
 
@@ -138,6 +140,7 @@ a.site-title
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: linear-gradient(360deg, #000000, #2b0000);
 
   .nav-trigger {
       display: none;
