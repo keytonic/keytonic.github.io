@@ -16,7 +16,7 @@
     xalign-items: center;
 
     xbackground-image: linear-gradient(360deg, #000000, #2b0000);
-    border-bottom: 1px solid hsl(354.09deg 98.97% 38.24% / 25%);
+    border-bottom: 1px solid hsla(354.09, 98.97%, 38.24%, 0.25);
     
 }
 
@@ -271,7 +271,7 @@ a.site-title
   padding: $spacing-unit 0;
   background-color: $color1;
 
-  border-top: 1px solid hsl(354.09deg 98.97% 38.24% / 25%);
+  border-bottom: 1px solid hsla(354.09, 98.97%, 38.24%, 0.25);
 
   xbackground-image: linear-gradient(180deg, #000000, #2b0000);
 }
