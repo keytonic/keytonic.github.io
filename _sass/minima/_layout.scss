@@ -1,3 +1,5 @@
+//https://coolors.co/000000-c20114-666666-596475-2d2d2d
+
 /**
  * Site header
  */
@@ -14,6 +16,8 @@
     xalign-items: center;
 
     xbackground-image: linear-gradient(360deg, #000000, #2b0000);
+    border-bottom: 1px solid hsl(354.09deg 98.97% 38.24% / 25%);
+    
 }
 
 .logo-wrapper
@@ -36,7 +40,7 @@
 {
     width: 32px;
     height: 32px;
-    fill: white;
+    fill: #666666;
 
     xposition: absolute;
     xtop: 10px;
@@ -70,21 +74,21 @@
 */
 use#logo:hover
 {
-    //fill:red !important;
+    //fill:#C20114 !important;
     //transition: transform 0.3s;
     //transform: scale(1.5,1.5);
 }
 
 use#logot:hover
 {
-    //fill:red !important;
+    //fill:#C20114 !important;
     //transition: transform 0.3s;
     //transform: scale(1.5,1.5);
 }
 
 .mylogo:hover
 {
-    fill:red !important;
+    fill:#C20114 !important;
     transition: transform 0.3s;
     transform: scale(1.5,1.5);
 }
@@ -94,7 +98,7 @@ use#logot:hover
 
 #hamburger:hover
 {
-    fill: red;
+    fill: #C20114;
 }
 
 .site-header
@@ -126,14 +130,14 @@ use#logot:hover
   &,
   &:visited {
     font-weight: bold;
-    color: white;
+    color: #666666;
     
   }
 }
 
 .site-title:hover
 {
-    xcolor:red;
+    xcolor:#C20114;
 }
 
 .social-media-list li
@@ -164,7 +168,7 @@ a.site-title
   }
 
   .page-link {
-    color: white;
+    color: #666666;
     text-decoration: none;
     line-height: $base-line-height;
 
@@ -203,7 +207,7 @@ a.site-title
       text-align: center;
 
       > svg {
-        fill: white;
+        fill: #666666;
       }
     }
 
@@ -253,7 +257,7 @@ a.site-title
   padding: $spacing-unit 0;
   background-color: black;
 
-  border-top: 1px solid grey;
+  border-top: 1px solid hsl(354.09deg 98.97% 38.24% / 25%);
 
   xbackground-image: linear-gradient(180deg, #000000, #2b0000);
 }
@@ -261,7 +265,7 @@ a.site-title
 .footer-heading {
   font-size: 15px;
   margin-top: $spacing-unit * 0.5;
-  color: lightgrey;
+  color: #666666;
   text-align: center;
   margin-bottom: 0px;
 }
@@ -274,7 +278,7 @@ a.site-title
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: lightgrey;
+  color: #666666;
   @extend %clearfix;
 }
 
@@ -302,9 +306,18 @@ a.site-title
 /**
  * Page content
  */
-.page-content {
-  padding: $spacing-unit 0;
-  flex: 1;
+.page-content 
+{
+    xpadding: $spacing-unit 0;
+    flex: 1;
+    background-color: #666666;
+    border-radius: 8px;
+    max-width: calc(800px - 30px* 2);
+    width: calc(800px - 30px* 2);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 .page-heading {
@@ -326,7 +339,7 @@ a.site-title
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: #1ea10cd3;
 }
 
 .post-link {
@@ -382,7 +395,7 @@ a.site-title
 }
 .page-link:hover 
 {
-    color: red;
+    color: #C20114;
 }
 
 
@@ -403,7 +416,7 @@ a.site-title
 
 .social-media-list a
 {
-    color:white;
+    color:#666666;
     text-decoration: none !important;
     display: block;
     text-align: center;
@@ -416,7 +429,7 @@ a.site-title
     transition: transform 0.3s;
 
     transform: scale(2,2);
-    color: red;
+    color: #C20114;
 }
 
 a.post-link:hover, a.post-link:visited
@@ -460,7 +473,7 @@ a.post-link:hover, a.post-link:visited
         background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        background-image: linear-gradient(to right, red, red 50%, white 50%);
+        background-image: linear-gradient(to right, #C20114, #C20114 50%, #666666 50%);
 
         background-size: 200% 100%;
         background-position: -100%;
@@ -477,7 +490,7 @@ a.post-link:hover, a.post-link:visited
             bottom:-3px;
             z-index:0;
             position:absolute;
-            background:red;
+            background:#C20114;
             transition: all 0.3s ease-in-out;
         }
         &:hover
@@ -509,7 +522,7 @@ a.flip-animate
         transition: transform 0.3s;
         transform-origin: 50% 0;
         transform-style: preserve-3d;
-        color:white;
+        color:#666666;
         xcontent: "";
     }
     span::after
@@ -546,7 +559,7 @@ a.flip-animate
     span:focus:before 
     {
         xtransition: color 0.3s;
-        color: red;
+        color: #C20114;
         text-shadow: inherit;
     }
 }

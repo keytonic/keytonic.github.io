@@ -16,7 +16,8 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background-color: $background-color;
+  xbackground-color: #7F9183;
+  background-color: #2d2d2d;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -111,7 +112,7 @@ a {
   }
 
   &:hover {
-    color: red;
+    color: #C20114;
     /*text-decoration: underline;*/
   }
 
@@ -212,14 +213,14 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: lightgrey;
+    fill: #666666;
     padding-right: 5px;
     vertical-align: text-top;
 }
 
 .svg-icon:hover
 {
-    fill:red;
+    fill:#C20114;
 }
 
 

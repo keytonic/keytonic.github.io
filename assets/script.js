@@ -63,8 +63,8 @@ window.onload = function ()
 
     andrew.addEventListener("mouseover", function() 
     {
-        a.style.fill = "red";
-        t.style.fill = "white";
+        a.style.fill = "#C20114";//red
+        t.style.fill = "#666666";//grey
 
     });
     andrew.addEventListener("mouseout", function() 
@@ -75,8 +75,8 @@ window.onload = function ()
 
     towner.addEventListener("mouseover", function() 
     {
-        a.style.fill = "white";
-        t.style.fill = "red";
+        a.style.fill = "#666666";//grey
+        t.style.fill = "#C20114";//red
     });
     towner.addEventListener("mouseout", function() 
     {
