@@ -8,12 +8,12 @@
     // Positioning context for the mobile navigation icon
     //position: relative;
     border-bottom: 0px;
-    xbackground-color: black;
+    background-color: black;
     xdisplay: flex;
     xflex-direction: row;
     xalign-items: center;
 
-    background-image: linear-gradient(360deg, #000000, #2b0000);
+    xbackground-image: linear-gradient(360deg, #000000, #2b0000);
 }
 
 .logo-wrapper
@@ -52,7 +52,7 @@
 
 
 }
-
+/*
 @keyframes logoMove
 {
     0% 
@@ -67,7 +67,7 @@
 
       
 }
-
+*/
 use#logo:hover
 {
     //fill:red !important;
@@ -97,22 +97,20 @@ use#logot:hover
     fill: red;
 }
 
+.site-header
+{
+    top:-60px;
+    position: static;
+}
+
+
 .sticky
 {
-    transition: position 2s;
-
+    transition: all 0.5s ease;
     position: sticky;
-    top: 0;
+    top:0px;
+    //top: 1px;
     border-bottom: 1px solid black;
-
-
-
-    .mylogo
-    {
-        xstroke: black;
-        xstroke-width: 1px;
-        xstroke-linejoin: round;
-    }
 
 
 }
@@ -155,7 +153,7 @@ a.site-title
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(360deg, #000000, #2b0000);
+    xbackground-image: linear-gradient(360deg, #000000, #2b0000);
 
   .nav-trigger {
       display: none;
@@ -257,7 +255,7 @@ a.site-title
 
   border-top: 1px solid grey;
 
-  background-image: linear-gradient(180deg, #000000, #2b0000);
+  xbackground-image: linear-gradient(180deg, #000000, #2b0000);
 }
 
 .footer-heading {

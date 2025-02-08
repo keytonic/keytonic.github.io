@@ -9,14 +9,51 @@ window.onload = function ()
         if (window.scrollY > 0) 
         {
             header.classList.add('sticky');
-            nav.classList.add('sticky');
+            //nav.classList.add('sticky');
         } 
         else 
         {
             header.classList.remove('sticky');
-            nav.classList.remove('sticky');
+            //nav.classList.remove('sticky');
         }
-    }
+    };
+
+    
+    document.onclick = function(event)
+    {
+        if(event.target.id == "nav-trigger") return;
+
+        const nav_trigger = document.getElementById("nav-trigger");
+
+        if(nav_trigger.checked == true)
+        {
+            nav_trigger.checked = false;
+            //alert(event.target.id);
+        }
+
+    };
+
+    document.onresize = function()
+    {
+        const nav_trigger = document.getElementById("nav-trigger");
+
+        if(nav_trigger.checked == true)
+        {
+            nav_trigger.checked = false;
+            //alert(event.target.id);
+        }
+    };
+
+    window.onresize = function()
+    {
+        const nav_trigger = document.getElementById("nav-trigger");
+
+        if(nav_trigger.checked == true)
+        {
+            nav_trigger.checked = false;
+            //alert(event.target.id);
+        }
+    };
 
     let andrew = document.getElementById("andrew");
     let towner = document.getElementById("towner");
