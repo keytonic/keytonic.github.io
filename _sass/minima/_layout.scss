@@ -68,12 +68,29 @@
       
 }
 
+use#logo:hover
+{
+    //fill:red !important;
+    //transition: transform 0.3s;
+    //transform: scale(1.5,1.5);
+}
 
+use#logot:hover
+{
+    //fill:red !important;
+    //transition: transform 0.3s;
+    //transform: scale(1.5,1.5);
+}
 
 .mylogo:hover
 {
-    fill:red;
+    fill:red !important;
+    transition: transform 0.3s;
+    transform: scale(1.5,1.5);
 }
+
+
+
 
 #hamburger:hover
 {
@@ -194,11 +211,25 @@ a.site-title
 
     input ~ .trigger {
       clear: both;
-      display: none;
+      display: none !important;
+      flex-direction: column !important;
+    }
+
+    #primary
+    {
+        margin-bottom: 20px;
+        margin: 20px;
+        gap: 10px;
+    }
+
+    #primary a 
+    {
+        margin: 0px;
+        padding: 0px;
     }
 
     input:checked ~ .trigger {
-      display: block;
+      display: flex !important;
       padding-bottom: 5px;
     }
 
@@ -384,6 +415,9 @@ a.site-title
 
 .social-media-list a:hover, a.u-email:hover
 {
+    transition: transform 0.3s;
+
+    transform: scale(2,2);
     color: red;
 }
 
@@ -392,65 +426,129 @@ a.post-link:hover, a.post-link:visited
     color:#2a7ae2;
 }
 
-a.flip-animate {
-    perspective: 1000px;
-    
-    span {
-      position: relative;
-      display: inline-block;
-      padding: 0;    
-      transition: transform 0.3s;
-      transform-origin: 50% 0;
-      transform-style: preserve-3d;
-      
-    
 
+#primary
+{
+    xposition:absolute;
+    top:0;
+    margin:auto;
+    text-align:center;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:center;
+    height:100%;
 
+    xmargin:0 20px;
+    position:relative;
+
+    a{
+        text-decoration:none;
+        display:block;
+        xpadding:5px 0;
+        xfont-family:'Open Sans';
+        xfont-size:26px;
+        xline-height:1;
+        xfont-weight:bold;
+        position:relative;
+        z-index:1;
+        text-align: center;
+
+        /*
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        */
+
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        background-image: linear-gradient(to right, red, red 50%, white 50%);
+
+        background-size: 200% 100%;
+        background-position: -100%;
+        transition: all 0.3s ease-in-out;
+
+        &:before
+        {
+            display:block;
+            content:'';
+            width:0;
+            height:3px;
+            bottom:5px;
+            left:0;
+            bottom:-3px;
+            z-index:0;
+            position:absolute;
+            background:red;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover
+        {
+            background-position: 0%;
+            &:before
+            {
+                width:100%;
+            }
+        }
     }
-    
-    span:before {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: attr(data-hover);
-      transition: color 0.3s;
+}
 
-      
-      transform: rotateX(-90deg);
-      transform-origin: 50% 0;
-      text-align: center;
 
-      
-      color: transparent;
-      text-shadow: none;
 
+
+
+a.flip-animate 
+{
+    xperspective: 1000px;
+    overflow: hidden;
+    display: inline-block;
+    span 
+    {
+        position: relative;
+        display: inline-block;
+        padding: 0;    
+        transition: all 0.3s ease-in-out;
+        transition: transform 0.3s;
+        transform-origin: 50% 0;
+        transform-style: preserve-3d;
+        color:white;
+        xcontent: "";
     }
-
-    &:hover span,
-    &:focus span {
-
-      transform: rotateX(90deg) translateY(-22px);
-      
-      xcolor: transparent;
-      xtext-shadow: none;
-
+    span::after
+    {
+        xcontent: "";
     }
-    
-    &:hover span:before,
-    &:focus span:before {
+    span:before 
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: attr(data-hover);
         transition: color 0.3s;
-      color: red;
-      text-shadow: inherit;
-
-
-
-
-
+        transform: rotateX(-90deg);
+        transform-origin: 50% 0;
+        text-align: center;
+        color: transparent;
+        text-shadow: none;
     }
-
-
-
-
-  }
+    span:hover,
+    span:focus
+    {
+        transition: all 0.3s;
+        xcolor: transparent;
+        text-shadow: inherit;
+        transition: transform 0.3s;
+        transform: rotateX(90deg) translateY(-22px);
+        xcolor: transparent;
+        xtext-shadow: none;
+    }
+    span:hover:before,
+    span:focus:before 
+    {
+        xtransition: color 0.3s;
+        color: red;
+        text-shadow: inherit;
+    }
+}

@@ -19,21 +19,31 @@ window.onload = function ()
     }
 
     let andrew = document.getElementById("andrew");
+    let towner = document.getElementById("towner");
+    let a = document.getElementById("logo");
+    let t = document.getElementById("logot");
+
+
     andrew.addEventListener("mouseover", function() 
     {
-        document.getElementById("logo").style.fill = "red";
+        a.style.fill = "red";
+        t.style.fill = "white";
+
     });
     andrew.addEventListener("mouseout", function() 
     {
-        document.getElementById("logo").style.fill = "inherit";
+        a.style.fill = "inherit";
+        t.style.fill = "transparent";
     });
-    let towner = document.getElementById("towner");
+
     towner.addEventListener("mouseover", function() 
     {
-        document.getElementById("logot").style.fill = "red";
+        a.style.fill = "white";
+        t.style.fill = "red";
     });
     towner.addEventListener("mouseout", function() 
     {
-        document.getElementById("logot").style.fill = "transparent";
+        a.style.fill = "inherit";
+        t.style.fill = "transparent";
     });
 }
