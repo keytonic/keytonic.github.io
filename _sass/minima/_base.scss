@@ -17,7 +17,7 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   xbackground-color: #7F9183;
-  background-color: #2d2d2d;
+  background-color: $color2;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -112,7 +112,7 @@ a {
   }
 
   &:hover {
-    color: #C20114;
+    color: $color4;
     /*text-decoration: underline;*/
   }
 
@@ -213,14 +213,14 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #666666;
+    fill: $color3;
     padding-right: 5px;
     vertical-align: text-top;
 }
 
 .svg-icon:hover
 {
-    fill:#C20114;
+    fill:$color4;
 }
 
 

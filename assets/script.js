@@ -21,11 +21,9 @@ window.onload = function ()
     
     document.onclick = function(event)
     {
-        if(event.target.id == "nav-trigger") return;
-
         const nav_trigger = document.getElementById("nav-trigger");
 
-        if(nav_trigger.checked == true)
+        if(event.target.id != "nav-trigger" && nav_trigger.checked == true)
         {
             nav_trigger.checked = false;
             //alert(event.target.id);
@@ -63,7 +61,7 @@ window.onload = function ()
 
     andrew.addEventListener("mouseover", function() 
     {
-        a.style.fill = "#C20114";//red
+        a.style.fill = "#990000";//red
         t.style.fill = "#666666";//grey
 
     });
@@ -76,7 +74,7 @@ window.onload = function ()
     towner.addEventListener("mouseover", function() 
     {
         a.style.fill = "#666666";//grey
-        t.style.fill = "#C20114";//red
+        t.style.fill = "#990000";//red
     });
     towner.addEventListener("mouseout", function() 
     {

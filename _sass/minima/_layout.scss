@@ -1,5 +1,5 @@
 //https://coolors.co/000000-c20114-666666-596475-2d2d2d
-
+//https://coolors.co/000000-141414-282828-450000-630000
 /**
  * Site header
  */
@@ -10,7 +10,7 @@
     // Positioning context for the mobile navigation icon
     //position: relative;
     border-bottom: 0px;
-    background-color: black;
+    background-color: $color1;
     xdisplay: flex;
     xflex-direction: row;
     xalign-items: center;
@@ -19,6 +19,12 @@
     border-bottom: 1px solid hsl(354.09deg 98.97% 38.24% / 25%);
     
 }
+
+.pc-wrapper
+{
+    padding: 30px;
+}
+
 
 .logo-wrapper
 {
@@ -40,7 +46,7 @@
 {
     width: 32px;
     height: 32px;
-    fill: #666666;
+    fill: $color3;
 
     xposition: absolute;
     xtop: 10px;
@@ -74,21 +80,21 @@
 */
 use#logo:hover
 {
-    //fill:#C20114 !important;
+    //fill:$color4 !important;
     //transition: transform 0.3s;
     //transform: scale(1.5,1.5);
 }
 
 use#logot:hover
 {
-    //fill:#C20114 !important;
+    //fill:$color4 !important;
     //transition: transform 0.3s;
     //transform: scale(1.5,1.5);
 }
 
 .mylogo:hover
 {
-    fill:#C20114 !important;
+    fill:$color4 !important;
     transition: transform 0.3s;
     transform: scale(1.5,1.5);
 }
@@ -98,7 +104,7 @@ use#logot:hover
 
 #hamburger:hover
 {
-    fill: #C20114;
+    fill: $color4;
 }
 
 .site-header
@@ -130,14 +136,14 @@ use#logot:hover
   &,
   &:visited {
     font-weight: bold;
-    color: #666666;
+    color: $color3;
     
   }
 }
 
 .site-title:hover
 {
-    xcolor:#C20114;
+    xcolor:$color4;
 }
 
 .social-media-list li
@@ -150,7 +156,13 @@ a.site-title
 {
     text-decoration: none;
 }
-
+/*
+.page-content
+{
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+*/
 .site-nav {
     float: right;
     line-height: 40px;
@@ -168,7 +180,7 @@ a.site-title
   }
 
   .page-link {
-    color: #666666;
+    color: $color3;
     text-decoration: none;
     line-height: $base-line-height;
 
@@ -197,6 +209,8 @@ a.site-title
       cursor: pointer;
     }
 
+
+
     .menu-icon {
       display: block;
       float: right;
@@ -207,7 +221,7 @@ a.site-title
       text-align: center;
 
       > svg {
-        fill: #666666;
+        fill: $color3;
       }
     }
 
@@ -255,7 +269,7 @@ a.site-title
 .site-footer {
   //border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
-  background-color: black;
+  background-color: $color1;
 
   border-top: 1px solid hsl(354.09deg 98.97% 38.24% / 25%);
 
@@ -265,7 +279,7 @@ a.site-title
 .footer-heading {
   font-size: 15px;
   margin-top: $spacing-unit * 0.5;
-  color: #666666;
+  color: $color3;
   text-align: center;
   margin-bottom: 0px;
 }
@@ -278,7 +292,7 @@ a.site-title
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: #666666;
+  color: $color3;
   @extend %clearfix;
 }
 
@@ -308,15 +322,26 @@ a.site-title
  */
 .page-content 
 {
-    xpadding: $spacing-unit 0;
+    /*xpadding: $spacing-unit 0;*/
     flex: 1;
-    background-color: #666666;
+    background-color: $color3;
     border-radius: 8px;
-    max-width: calc(800px - 30px* 2);
     width: calc(800px - 30px* 2);
+
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    @include media-query(800px) 
+    {
+        width: calc(100% - 40px);
+    }
+    @include media-query(650px)
+    {
+        margin: 0 !important;
+        border-radius: 0 !important;
+        width:auto;
+    }
 
 }
 
@@ -395,7 +420,7 @@ a.site-title
 }
 .page-link:hover 
 {
-    color: #C20114;
+    color: $color4;
 }
 
 
@@ -416,7 +441,7 @@ a.site-title
 
 .social-media-list a
 {
-    color:#666666;
+    color:$color3;
     text-decoration: none !important;
     display: block;
     text-align: center;
@@ -429,7 +454,7 @@ a.site-title
     transition: transform 0.3s;
 
     transform: scale(2,2);
-    color: #C20114;
+    color: $color4;
 }
 
 a.post-link:hover, a.post-link:visited
@@ -473,7 +498,7 @@ a.post-link:hover, a.post-link:visited
         background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        background-image: linear-gradient(to right, #C20114, #C20114 50%, #666666 50%);
+        background-image: linear-gradient(to right, $color4, $color4 50%, $color3 50%);
 
         background-size: 200% 100%;
         background-position: -100%;
@@ -490,7 +515,7 @@ a.post-link:hover, a.post-link:visited
             bottom:-3px;
             z-index:0;
             position:absolute;
-            background:#C20114;
+            background:$color4;
             transition: all 0.3s ease-in-out;
         }
         &:hover
@@ -522,7 +547,7 @@ a.flip-animate
         transition: transform 0.3s;
         transform-origin: 50% 0;
         transform-style: preserve-3d;
-        color:#666666;
+        color:$color3;
         xcontent: "";
     }
     span::after
@@ -559,7 +584,7 @@ a.flip-animate
     span:focus:before 
     {
         xtransition: color 0.3s;
-        color: #C20114;
+        color: $color4;
         text-shadow: inherit;
     }
 }
