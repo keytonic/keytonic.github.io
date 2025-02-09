@@ -2,27 +2,35 @@
 layout: default
 ---
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-  {{ content }}
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+    {{ content }}
+    {%- if site.posts.size > 0 -%}
+        {%- for post in site.posts -%}
+            <div class="post_block">
+                <div class="post_title">
+                    <a class="post_link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </div>
+                <div class="post_details">
+                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                    <div>{{ post.date | date: date_format }}</div>
+                    {%- if post.categories -%}
+                        <div>{{ post.categories | join: ' ' }}</div>
+                    {%- endif -%}
+                </div>
+                <div class="post_excerpt">
+                    <div>
+                    {%- if site.show_excerpts -%}
+                        {% assign excerptParts = post.excerpt | split: "<!-- excerpt-start -->" %}
+                        {{ excerptParts[1] | strip_newlines | truncatewords: 50 }}
+                    {%- endif -%}
+                    </div>
+                    <div class="button_container">
+                        <a href="{{ post.url | relative_url }}" class="post_button">Read More</a>
+                    </div>
+                </div>
+                
+            </div>
+        {%- endfor -%}
+    {%- endif -%}
 </div>
