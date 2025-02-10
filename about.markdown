@@ -23,6 +23,6 @@ Today, my focus is primarily on web development, working with [PHP](https://en.w
 
 ### **Looking Ahead**
 ---
-For the past two decades, web development has been a passion I pursued alongside my career in the **United States Air Force**. Throughout that time, I remained committed to learning new technologies, programming languages, and best practices as the industry evolved. Now, as I look forward to transitioning back to civilian life, I’m excited to turn my long-standing passion for coding into a full-time career.
+For the past two decades, web development has been a passion I pursued alongside my career in the [United States Air Force](https://www.airforce.com/). Throughout that time, I remained committed to learning new technologies, programming languages, and best practices as the industry evolved. Now, as I look forward to transitioning back to civilian life, I’m excited to turn my long-standing passion for coding into a full-time career.
 
 Thank you for taking the time to learn a bit about my journey!

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="home">
     {{ content }}
     {%- if site.posts.size > 0 -%}
@@ -19,15 +20,21 @@ layout: default
                     {%- endif -%}
                 </div>
                 <div class="post_excerpt">
-                    <div>
-                    {%- if site.show_excerpts -%}
-                        {% assign excerptParts = post.excerpt | split: "<!-- excerpt-start -->" %}
-                        {{ excerptParts[1] | strip_newlines | truncatewords: 50 }}
-                    {%- endif -%}
+                    <div class="post_thumb">
+                        <img id="thumb" src="{{ post.thumbnail }}" />
                     </div>
-                    <div class="button_container">
-                        <a href="{{ post.url | relative_url }}" class="post_button">Read More</a>
+                    <div class="post_excerpt_inner">
+                        <div class="post_excerpt_inner_innner">
+                            {%- if site.show_excerpts -%}
+                                {% assign excerptParts = post.excerpt | split: "<!-- excerpt-start -->" %}
+                                {{ excerptParts[1] | strip_newlines | truncatewords: 50 }}
+                            {%- endif -%}
+                        </div>
+                        <div class="button_container">
+                            <a href="{{ post.url | relative_url }}" class="post_button">Read More</a>
+                        </div>
                     </div>
+
                 </div>
                 
             </div>

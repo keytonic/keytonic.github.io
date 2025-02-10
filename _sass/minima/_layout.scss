@@ -10,7 +10,7 @@
     // Positioning context for the mobile navigation icon
     //position: relative;
     border-bottom: 0px;
-    background-color: $color1;
+    background-color: #000000bf;
     xdisplay: flex;
     xflex-direction: row;
     xalign-items: center;
@@ -275,7 +275,7 @@ hr
 .site-footer {
   //border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
-  background-color: $color1;
+  background-color: #000000bf;
 
   border-top: 1px solid hsla(354.09, 98.97%, 38.24%, 0.25);
 
@@ -330,7 +330,7 @@ hr
 {
     /*xpadding: $spacing-unit 0;*/
     flex: 1;
-    background-color: $color3;
+    background-color: #666666bf;
     border-radius: 8px;
     width: calc(800px - 30px* 2);
 
@@ -635,8 +635,36 @@ a.flip-animate
     background-color: $color5;
     padding: 10px;
 
-    flex-direction: column;
+
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+
+
+    @include media-query(800px) 
+    {
+
+    }
+    @include media-query(650px)
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.post_excerpt_inner
+{
+    display: flex;
+    min-height: 112px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.post_thumb
+{
+
+    xbackground-color: red;
 }
 
 .post_block
@@ -652,6 +680,12 @@ a.flip-animate
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    @include media-query(650px)
+    {
+        justify-content: center;
+    }
+
 }
 
 .post_button
@@ -669,7 +703,6 @@ a.post_button
     transition: all 0.4s;
     color: $color1;
     text-decoration: none;
-    z-index:99;
 }
 
 a.post_button:hover
@@ -679,4 +712,25 @@ a.post_button:hover
     translate: -5px -2px 0px;
     color: $color5;
     background-color: $color2;
+}
+
+img#thumb
+{
+    width: 200px !important;
+    height: 112px !important;
+    max-width: unset !important;
+    border: 0;
+}
+
+.post_excerpt_inner_innner
+{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include media-query(650px)
+    {
+        padding-top: 10px;
+        text-align: justify;
+    }
+
 }

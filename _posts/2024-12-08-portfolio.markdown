@@ -2,11 +2,18 @@
 layout: post
 title:  "Portfolio"
 date:   2024-12-08 00:00:00 -0500
-categories: Category 1
+thumbnail: "/assets/portfolio_post.png"
+categories: Category-1
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
 ---
+{% comment %} 
+    Thumbnails are 200x112, 16:9
+{% endcomment %}
+
+
+
 # Super utrum fera possent habuissem teneri aut
 
 ## Inscius volatu perspicuus incidit saepe non cum
