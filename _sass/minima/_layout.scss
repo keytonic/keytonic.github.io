@@ -330,7 +330,7 @@ hr
 {
     /*xpadding: $spacing-unit 0;*/
     flex: 1;
-    background-color: #666666bf;
+    background-color: #7f7f7fbf;
     border-radius: 8px;
     width: calc(800px - 30px* 2);
 
@@ -709,9 +709,22 @@ a.post_button:hover
 {
     transition: all 0.3s;
     transform: scale(1.1,1.1);
-    translate: -5px -2px 0px;
     color: $color5;
     background-color: $color2;
+
+
+    @include media-query(650px)
+    {
+
+    }
+
+    @media screen and (min-width: 650px) 
+    {
+        
+        translate: -5px -2px 0px;
+    }
+
+
 }
 
 img#thumb
@@ -720,17 +733,34 @@ img#thumb
     height: 112px !important;
     max-width: unset !important;
     border: 0;
+
+
+    xborder: 1px solid #ddd;
+    border-radius: 4px;
+    xpadding: 5px;
+    xwidth: 150px;
+
+
+
+
+}
+
+img#thumb:hover
+{
+    box-shadow: 0 0 2px 1px #99000080;
 }
 
 .post_excerpt_inner_innner
 {
     padding-left: 10px;
-    padding-right: 10px;
+    
 
     @include media-query(650px)
     {
         padding-top: 10px;
-        text-align: justify;
+        xpadding-right: 10px;
+        padding-left: 0px;
+        
     }
-
+    text-align: justify;
 }

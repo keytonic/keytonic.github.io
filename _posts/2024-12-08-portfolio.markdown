@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Portfolio"
+title:  "My personal portfolio is online!"
 date:   2024-12-08 00:00:00 -0500
 thumbnail: "/assets/portfolio_post.png"
-categories: Category-1
+categories: Personal
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
@@ -14,46 +14,40 @@ excerpt_separator: <!-- excerpt-end -->
 
 
 
-# Super utrum fera possent habuissem teneri aut
+# My Personal Portfolio
 
-## Inscius volatu perspicuus incidit saepe non cum
+## Overview
+<!-- excerpt-start -->My personal portfolio is a showcase of my expertise, experience, and technical capabilities. It highlights my proficiency in front-end and back-end technologies, frameworks, and tools, giving potential employers or clients a clear understanding of my skills.<!-- excerpt-end -->
 
-Lorem markdownum Midan evitata; ora modo tempus: flavum cervicem hic;
-revirescere imago utque. <!-- excerpt-start -->Hominumque requies eadem. Mihi dubitanti hospes.
-Ieiunia nam paulatim dici munera dumque de illuc quique, fertur est citius
-ferre. Aether moenia amari, Caras nec Acoetes fatetur Athamanas minus.<!-- excerpt-end -->
+## Featured Projects
+The portfolio includes a curated selection of recent projects that demonstrate my skills in web development and problem-solving. Each project features:
+- A detailed description
+- Key technologies used
+- Interactive previews or live links
 
-1. Apex aciem cavari
-2. Inponit tota rugas vincula rector
-3. Per est usque quam virides matris negaretur
+This allows visitors to explore my work firsthand and gain insight into my development process.
 
-Frustra vultus resurgere tantum, ad miser, sic saepe mihi iam cruori aurum tecta
-scelus, nunc signa parentem. Sequenti ab videt Achaia, haeserunt ora sortis
-levare et hoc ille? [Saevit](http://dum-ingreditur.net/) et iubemur licentia;
-cupiere ego dignus, tenui quem.
+## Resume and Technical Skills
+Additionally, my portfolio includes a comprehensive resume outlining:
+- Professional background
+- Education
+- Work experience
 
-> Et nec **Thebae daulida**; primus in liquerunt rector in et erigitur festis ne
-> amatis modo, tu opem. Stupuit Ceyx mihi placuisse praeterque passurae ictus
-> finiat robora init vultum femina invictumque Trachinia. Vivo aetherium et
-> sublime adspice! Pavent iurgia! Antris non raras, nova aquis tutus?
+An overview of my technical skills is also included, ensuring transparency about my qualifications and expertise.
 
-## Cornua nihil picea morsu medioque occupat umbram
+## Technologies Used
+My portfolio is built using the following technologies:
 
-*Tauro* honore undaque tetigere *reverti letum* clauserat inponit formosus
-aethera; [ex capitum repulsam](http://quodille.org/contentuscorpore) truncos.
-Vomit tangi temperat inritamen hesternos possent Stygias rubra non subeunt
-latuit.
+- **React.js**: Provides a fast and dynamic front-end experience, ensuring smooth navigation and seamless content updates.
+- **Material UI**: Enhances the design with a modern and professional interface, featuring responsive components for consistency across screen sizes.
+- **HTML & CSS**: Establish the foundational structure and styling.
+- **JavaScript**: Introduces interactivity, enabling features such as animations, form handling, and API integration.
 
-1. Obscura ignes
-2. Pectore sed sum maior non tinctam flavam
-3. Raptusque illo tellure licet digessit arbore
-4. Iaculatus furor viris deus dona aderamus
-5. Ita calcavit sidereus data templa gaudens versum
+## Development Workflow
+For an optimized development workflow, I utilized:
+- **VS Code**: My primary code editor, leveraging powerful extensions and debugging tools.
+- **Vite**: A fast and efficient build tool that significantly improves performance during development and production.
 
-Nec liquidas tauri. Litus et memor in merito cum et Tisiphone, cum illud reperta
-primusque, interdum lecta, cum saxo crinem. Cornibus cessant primosque vulnus
-loco avium ortas.
+## Conclusion
+By combining these technologies and best practices, my portfolio serves as both a personal branding tool and a demonstration of my ability to create professional, high-quality web applications.
 
-Faciendus fulmina veterum motatque non esse *talisque* ut mora, his vitreis
-facienda et dextra vimque, iaculabile in vertice. Instruis Alpheias at est adde
-ab quae caerulus, vixque ut.
