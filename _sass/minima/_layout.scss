@@ -370,7 +370,7 @@ hr
 
 .post-meta {
   font-size: $small-font-size;
-  color: #1ea10cd3;
+  color: $color1;
 }
 
 .post-link {
@@ -378,7 +378,12 @@ hr
   @include relative-font-size(1.5);
 }
 
-
+.post-content img
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
 /**
  * Posts

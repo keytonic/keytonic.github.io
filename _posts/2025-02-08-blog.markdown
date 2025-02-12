@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Blog"
+title:  "Surprise! I Finally Have a Blog!"
 date:   2025-02-08 00:00:00 -0500
 thumbnail: "/assets/blog_post.png"
-categories: Category-2
+categories: Personal
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
@@ -20,7 +20,7 @@ excerpt_separator: <!-- excerpt-end -->
 
 Lorem markdownum disparibus Gratia et nec et passurae vide sint deque respiciens
 emergit sua ferebat an. Verbis inpleverunt dolor; sperare et male dum
-cunctisque, <!-- excerpt-start -->arma levia coetus atque silices fugam terraeque vultuque *sub*.<!-- excerpt-end -->
+cunctisque, <!-- excerpt-start -->I've been meaning to start a blog for a while, and it's finally here! Stay tuned for updates, insights, and all kinds of content. Check it out!<!-- excerpt-end -->
 Rustica despexit frondem? **Relevare regnarat cornua** cecidisti
 [quasi](http://www.corpora.io/infelixpervenit), sensurus sociis et vituli
 Amyntore. Haec in ferrum de removete, minor inque, dicta ramis, fratres ne.

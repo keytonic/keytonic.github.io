@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My personal portfolio is online!"
+title:  "My Portfolio is online – Check it Out!"
 date:   2024-12-08 00:00:00 -0500
 thumbnail: "/assets/portfolio_post.png"
 categories: Personal
@@ -12,14 +12,12 @@ excerpt_separator: <!-- excerpt-end -->
     Thumbnails are 200x112, 16:9
 {% endcomment %}
 
-
-
-# My Personal Portfolio
-
 ## Overview
-<!-- excerpt-start -->My personal portfolio is a showcase of my expertise, experience, and technical capabilities. It highlights my proficiency in front-end and back-end technologies, frameworks, and tools, giving potential employers or clients a clear understanding of my skills.<!-- excerpt-end -->
+---
+<!-- excerpt-start -->[My personal portfolio](https://www.andrewtowner.com) is a showcase of my expertise, experience, and technical capabilities. It highlights my proficiency in front-end and back-end technologies, frameworks, and tools, giving potential employers or clients a clear understanding of my skills.<!-- excerpt-end --> It can be viewed at the following URL: [https://andrewtowner.com](https://www.andrewtowner.com).
 
 ## Featured Projects
+---
 The portfolio includes a curated selection of recent projects that demonstrate my skills in web development and problem-solving. Each project features:
 - A detailed description
 - Key technologies used
@@ -28,6 +26,7 @@ The portfolio includes a curated selection of recent projects that demonstrate m
 This allows visitors to explore my work firsthand and gain insight into my development process.
 
 ## Resume and Technical Skills
+---
 Additionally, my portfolio includes a comprehensive resume outlining:
 - Professional background
 - Education
@@ -36,6 +35,7 @@ Additionally, my portfolio includes a comprehensive resume outlining:
 An overview of my technical skills is also included, ensuring transparency about my qualifications and expertise.
 
 ## Technologies Used
+---
 My portfolio is built using the following technologies:
 
 - **React.js**: Provides a fast and dynamic front-end experience, ensuring smooth navigation and seamless content updates.
@@ -44,10 +44,12 @@ My portfolio is built using the following technologies:
 - **JavaScript**: Introduces interactivity, enabling features such as animations, form handling, and API integration.
 
 ## Development Workflow
+---
 For an optimized development workflow, I utilized:
 - **VS Code**: My primary code editor, leveraging powerful extensions and debugging tools.
 - **Vite**: A fast and efficient build tool that significantly improves performance during development and production.
 
 ## Conclusion
+---
 By combining these technologies and best practices, my portfolio serves as both a personal branding tool and a demonstration of my ability to create professional, high-quality web applications.
 
