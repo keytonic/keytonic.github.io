@@ -331,7 +331,7 @@ hr
     /*xpadding: $spacing-unit 0;*/
     flex: 1;
     xbackground-color: #7f7f7fbf;
-    background-color: rgb(128 128 128 / 75%);
+    background-color: rgba(128, 128, 128, 0.75);
     border-radius: 8px;
     width: calc(800px - 30px* 2);
 
