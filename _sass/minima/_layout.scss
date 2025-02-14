@@ -330,7 +330,8 @@ hr
 {
     /*xpadding: $spacing-unit 0;*/
     flex: 1;
-    background-color: #7f7f7fbf;
+    xbackground-color: #7f7f7fbf;
+    background-color: rgb(128 128 128 / 75%);
     border-radius: 8px;
     width: calc(800px - 30px* 2);
 
@@ -403,7 +404,7 @@ hr
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  /*margin-bottom: $spacing-unit;*/
 
   h2 {
     @include relative-font-size(2);

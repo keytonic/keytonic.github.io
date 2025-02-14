@@ -14,7 +14,7 @@ excerpt_separator: <!-- excerpt-end -->
 
 ## Overview
 ---
-<!-- excerpt-start -->[My personal portfolio](https://www.andrewtowner.com) is a showcase of my expertise, experience, and technical capabilities. It highlights my proficiency in front-end and back-end technologies, frameworks, and tools, giving potential employers or clients a clear understanding of my skills.<!-- excerpt-end --> It can be viewed at the following URL: [https://andrewtowner.com](https://www.andrewtowner.com).
+<!-- excerpt-start -->[My personal portfolio](https://www.andrewtowner.com) is a showcase of my expertise, experience, and technical capabilities. It highlights my proficiency in front-end and back-end technologies, frameworks, and tools, giving potential employers or clients a clear understanding of my skills. It can be viewed at the following URL: [https://andrewtowner.com](https://www.andrewtowner.com).<!-- excerpt-end -->
 
 ## Featured Projects
 ---
@@ -38,16 +38,16 @@ An overview of my technical skills is also included, ensuring transparency about
 ---
 My portfolio is built using the following technologies:
 
-- **React.js**: Provides a fast and dynamic front-end experience, ensuring smooth navigation and seamless content updates.
-- **Material UI**: Enhances the design with a modern and professional interface, featuring responsive components for consistency across screen sizes.
-- **HTML & CSS**: Establish the foundational structure and styling.
-- **JavaScript**: Introduces interactivity, enabling features such as animations, form handling, and API integration.
+- [React.js](https://react.dev/): Provides a fast and dynamic front-end experience, ensuring smooth navigation and seamless content updates.
+- [Material UI](https://mui.com/material-ui/): Enhances the design with a modern and professional interface, featuring responsive components for consistency across screen sizes.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) **&** [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): Establish the foundational structure and styling.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Introduces interactivity, enabling features such as animations, form handling, and API integration.
 
 ## Development Workflow
 ---
 For an optimized development workflow, I utilized:
-- **VS Code**: My primary code editor, leveraging powerful extensions and debugging tools.
-- **Vite**: A fast and efficient build tool that significantly improves performance during development and production.
+- [VS Code](https://code.visualstudio.com/): My primary code editor, leveraging powerful extensions and debugging tools.
+- [Vite](https://vite.dev/): A fast and efficient build tool that significantly improves performance during development and production.
 
 ## Conclusion
 ---
