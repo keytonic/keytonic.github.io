@@ -96,7 +96,8 @@ window.onload = function ()
 function handleSubmit(event) 
 {
     event.preventDefault();
-    
+    event.target.classList.add('was-validated');
+
     if (!event.target.checkValidity()) 
     {
         event.preventDefault();
@@ -106,52 +107,43 @@ function handleSubmit(event)
     else
     {
         //alert("good");
-        let name = document.getElementsByName("name")[0].value;
-        let phone = document.getElementsByName("phone")[0].value;
-        let email = document.getElementsByName("email")[0].value;
-        let message = document.getElementsByName("message")[0].value;
+        let name = document.getElementsByName("name")[0];
+        let phone = document.getElementsByName("phone")[0];
+        let email = document.getElementsByName("email")[0];
+        let message = document.getElementsByName("message")[0];
+        let button = document.getElementById("form-button");
 
         var http = new XMLHttpRequest();
-
+/*
+        http.addEventListener("error",function(event)
+        {
+            event.preventDefault();
+            alert("error");
+        });
+*/
         http.onreadystatechange = function () 
         {
+            //https://www.w3schools.com/Xml/ajax_xmlhttprequest_response.asp
+
+            /*
             if (this.readyState == 4 && this.status == 200)
             {
                 alert("email sent");
             }
+            */
+            if (this.readyState == 4)
+            {
+                event.target.classList.remove('was-validated');
+                event.target.reset();
+                button.disabled = true;
+                button.innerText = "Sent!";
+            }
+            //alert(`readyState=${this.readyState}\nStatus=${this.status}`);
         };
 
         http.open('POST', 'https://formspree.io/f/myzknyzb', true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        http.send(`name=${name}&phone=${phone}&email=${email}&message=${message}`);
-
+        http.send(`name=${name.value}&phone=${phone.value}&email=${email.value}&message=${message.value}`);
+        //http.abort();
     }
-
-    event.target.classList.add('was-validated');
-
-
-    
-    
-
-    /*
-    let name = document.getElementsByName("fname");
-    let phone = document.getElementsByName("fname");
-    let email = document.getElementsByName("fname");
-    let message = document.getElementsByName("fname");**/
-/*
-    var http = new XMLHttpRequest();
-
-    http.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            setmyAlert({ open: true, severity: "success", message: "Email sent!" });
-            setmyEmail({ name: "", email: "", phone: "", message: "" });
-        }
-    };
-
-    http.open('POST', 'https://formspree.io/f/myzknyzb', true);
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    http.send(`name=${myEmail.name}&phone=${myEmail.phone}&email=${myEmail.email}&message=${myEmail.message}`);
-    */
-
-    
 }
