@@ -1,63 +1,61 @@
-
+//box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
+//site-nav
 window.onload = function ()
 {
+    const nav = document.getElementById("site-nav");
+    const nav_trigger = document.getElementById("nav-trigger");
+    const header = document.getElementById("site-header");
+
     window.onscroll = function()
     {
-        const header = document.getElementById("site-header");
-        const nav = document.getElementById("site-nav");
-
         if (window.scrollY > 0) 
         {
             header.classList.add('sticky');
-            //nav.classList.add('sticky');
         } 
         else 
         {
             header.classList.remove('sticky');
-            //nav.classList.remove('sticky');
         }
     };
 
-    
     document.onclick = function(event)
     {
-        const nav_trigger = document.getElementById("nav-trigger");
-
         if(event.target.id != "nav-trigger" && nav_trigger.checked == true)
         {
             nav_trigger.checked = false;
-            //alert(event.target.id);
+            nav.style.boxShadow = "";
         }
-
+        else
+        {
+            nav.style.boxShadow = "0 0 16px 4px rgba(0, 0, 0, 0.5)";
+        }
     };
 
     document.onresize = function()
     {
-        const nav_trigger = document.getElementById("nav-trigger");
-
         if(nav_trigger.checked == true)
         {
             nav_trigger.checked = false;
-            //alert(event.target.id);
+            nav.style.boxShadow = "";
         }
     };
 
     window.onresize = function()
     {
-        const nav_trigger = document.getElementById("nav-trigger");
-
         if(nav_trigger.checked == true)
         {
             nav_trigger.checked = false;
-            //alert(event.target.id);
+            nav.style.boxShadow = "";
         }
     };
+
+
+
 
     let andrew = document.getElementById("andrew");
     let towner = document.getElementById("towner");
     let a = document.getElementById("logo");
     let t = document.getElementById("logot");
-
 
     andrew.addEventListener("mouseover", function() 
     {

@@ -8,6 +8,6 @@
 
 
 layout: home
-title: Home
+title: Blog
 permalink: /
 ---
