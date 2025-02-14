@@ -106,13 +106,13 @@ function handleSubmit(event)
     else
     {
         //alert("good");
-        let name = document.getElementsByName("name")[0];
-        let phone = document.getElementsByName("phone")[0];
-        let email = document.getElementsByName("email")[0];
-        let message = document.getElementsByName("message")[0];
+        let name = document.getElementsByName("name")[0].value;
+        let phone = document.getElementsByName("phone")[0].value;
+        let email = document.getElementsByName("email")[0].value;
+        let message = document.getElementsByName("message")[0].value;
 
         var http = new XMLHttpRequest();
-        
+
         http.onreadystatechange = function () 
         {
             if (this.readyState == 4 && this.status == 200)
