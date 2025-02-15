@@ -35,7 +35,7 @@ permalink: /contact/
 </div>
 <div class="div5" style="box-sizing: border-box;">
     <div class="mb-0 text-center" style="box-sizing: border-box;">
-        <button id="form-button" class="btn btn-primary" type="submit" style="box-sizing: border-box;">Send</button>
+        <button id="form-button" class="btn btn-primary" type="submit" style="box-sizing: border-box;"><i class="bi bi-send-fill">Send</i></button>
     </div>
 </div>
 </div>

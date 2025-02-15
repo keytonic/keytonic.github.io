@@ -1,5 +1,4 @@
-//box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
-//site-nav
+
 window.onload = function ()
 {
     const nav = document.getElementById("site-nav");
@@ -138,11 +137,9 @@ function handleSubmit(event)
     {
         event.preventDefault();
         event.stopPropagation();
-        //alert("bad");
     }
     else
     {
-        //alert("good");
         let name = document.getElementsByName("name")[0];
         let phone = document.getElementsByName("phone")[0];
         let email = document.getElementsByName("email")[0];
@@ -150,37 +147,25 @@ function handleSubmit(event)
         let button = document.getElementById("form-button");
 
         var http = new XMLHttpRequest();
-/*
-        http.addEventListener("error",function(event)
-        {
-            event.preventDefault();
-            alert("error");
-        });
-*/
+
         http.onreadystatechange = function () 
         {
-            //https://www.w3schools.com/Xml/ajax_xmlhttprequest_response.asp
-
-            /*
-            if (this.readyState == 4 && this.status == 200)
-            {
-                alert("email sent");
-            }
-            */
             if (this.readyState == 4)
             {
                 event.target.classList.remove('was-validated');
                 event.target.reset();
                 button.disabled = true;
-                button.innerText = "Sent!";
+
+                let bi = button.querySelector(".bi");
+                bi.classList.replace("bi-send-fill","bi-check-lg");
+                bi.innerText = "Sent!";
+                bi.style.color = "#00ff00";
             }
-            //alert(`readyState=${this.readyState}\nStatus=${this.status}`);
         };
 
         //http.open('POST', 'https://formspree.io/f/myzknyzb', true);
         http.open('POST', 'https://andrewtowner.com/post.php', true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         http.send(`name=${name.value}&phone=${phone.value}&email=${email.value}&message=${message.value}`);
-        //http.abort();
     }
 }
