@@ -141,7 +141,8 @@ function handleSubmit(event)
             //alert(`readyState=${this.readyState}\nStatus=${this.status}`);
         };
 
-        http.open('POST', 'https://formspree.io/f/myzknyzb', true);
+        //http.open('POST', 'https://formspree.io/f/myzknyzb', true);
+        http.open('POST', 'https://andrewtowner.com/post.php', true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         http.send(`name=${name.value}&phone=${phone.value}&email=${email.value}&message=${message.value}`);
         //http.abort();
