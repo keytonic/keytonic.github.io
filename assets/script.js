@@ -49,9 +49,6 @@ window.onload = function ()
         }
     };
 
-
-
-
     let andrew = document.getElementById("andrew");
     let towner = document.getElementById("towner");
     let a = document.getElementById("logo");
@@ -90,14 +87,46 @@ window.onload = function ()
             form.addEventListener('submit', handleSubmit, false);
         })
 
-        document.getElementById("form-name").addEventListener('input', handleTyping, false);
-        console.log( window.location.pathname );
+        document.getElementById("form-name").addEventListener('focus', handleClick, false);
+        document.getElementById("form-name").addEventListener('blur', handleBlur, false);
+
+        document.getElementById("form-phone").addEventListener('focus', handleClick, false);
+        document.getElementById("form-phone").addEventListener('blur', handleBlur, false);
+        
+        document.getElementById("form-email").addEventListener('focus', handleClick, false);
+        document.getElementById("form-email").addEventListener('blur', handleBlur, false);
+
+        document.getElementById("form-message").addEventListener('focus', handleClick, false);
+        document.getElementById("form-message").addEventListener('blur', handleBlur, false);
     }
 }
 
-function handleTyping(event)
+function handleClick(event)
 {
-    alert("hi");
+    let target = event.target;
+
+    if(target.id.indexOf("form-") == -1) return;
+
+    target.setAttribute("placeholder", "");
+    
+    document.getElementById(target.id + "-label").style.opacity = "1";
+    document.getElementById(target.id + "-label").style.top = "4px";
+    document.getElementById(target.id + "-label").style.left = "0px";
+}
+
+function handleBlur(event)
+{
+    let target = event.target;
+
+    if(target.id.indexOf("form-") == -1) return;
+ 
+    if(target.value.length <= 0)
+    {
+        target.setAttribute("placeholder",target.getAttribute("placeholder-slug"));
+        document.getElementById(target.id + "-label").style.opacity = "0";
+        document.getElementById(target.id + "-label").style.top = "40px";
+        document.getElementById(target.id + "-label").style.left = "13px";
+    }
 }
 
 function handleSubmit(event) 
