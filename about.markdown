@@ -4,7 +4,6 @@ title: About
 permalink: /about/
 ---
 
-
 ## **About Me**
 ---
 Welcome to my about page! Here's a glimpse into my coding journey and passion for technology.

@@ -13,11 +13,11 @@ excerpt_separator: <!-- excerpt-end -->
 {% endcomment %}
 
 ## Tom’s Nuisance Critter Control
-
+---
 <!-- excerpt-start -->I had the opportunity to develop the website and custom theme for [https://trappertom.com](https://trappertom.com), utilizing a combination of [PHP](https://www.php.net/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), and [WordPress](https://wordpress.com/). This project required a strong focus on design and functionality to create a seamless experience for visitors seeking professional critter control services.<!-- excerpt-end -->
 
 ### Tech Stack Breakdown
-
+---
 - [PHP](https://www.php.net/) powers the backend, handling dynamic content and server-side logic.
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) enhances interactivity, ensuring a smooth user experience.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) **&** [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) work together to create a responsive and visually appealing layout.
