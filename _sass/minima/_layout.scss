@@ -885,3 +885,36 @@ hr
 {
     padding-right: 12px;
 }
+
+.contact_links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+
+    @include media-query(550px)
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+    }
+}
+
+.contact_links a
+{
+    font-weight: normal;
+    @include media-query(550px)
+    {
+        margin-bottom: 15px;
+    }
+}
+
+i
+{
+    font-style: normal;
+}
