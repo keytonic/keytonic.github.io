@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "React-Dialogs"
+title:  "Draggable, and fully resizable dialogs for React"
 date:   2025-03-31 00:00:00 -0500
 thumbnail: "/assets/dialogs_post.png"
 categories: React
@@ -18,16 +18,16 @@ excerpt_separator: <!-- excerpt-end -->
 
 ## Alert
 ---
-![Alert Dialog](public/alert.png)
+![Alert Dialog](https://raw.githubusercontent.com/keytonic/React-Dialogs/refs/heads/main/public/alert.png)
 
 ## Confirm
 ---
-![Alert Dialog](public/confirm.png)
+![Confirm Dialog](https://raw.githubusercontent.com/keytonic/React-Dialogs/refs/heads/main/public/confirm.png)
 
 ## Prompt
 ---
-![Alert Dialog](public/prompt.png)
+![Prompt Dialog](https://raw.githubusercontent.com/keytonic/React-Dialogs/refs/heads/main/public/prompt.png)
 
 ## Customize
-![Alert Dialog](public/customize.png)
+![Custoize](https://raw.githubusercontent.com/keytonic/React-Dialogs/refs/heads/main/public/customize.png)
 
