@@ -114,10 +114,11 @@ a.site-title
     position: absolute;
     top: 9px;
     right: $spacing-unit * 0.5;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7490196078);
     border-radius: 5px;
     text-align: right;
     align-items: flex-end;
+    box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
 
     label[for="nav-trigger"] {
       display: block;
@@ -230,7 +231,7 @@ hr
 {
     flex: 1;
     background-color: rgba(128, 128, 128, 0.75);
-    box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
+    xbox-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     width: calc(800px - 30px* 2);
 

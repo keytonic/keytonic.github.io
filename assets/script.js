@@ -26,7 +26,7 @@ window.onload = function ()
         }
         else
         {
-            nav.style.boxShadow = "0 0 16px 4px rgba(0, 0, 0, 0.5)";
+            //nav.style.boxShadow = "0 0 16px 4px rgba(0, 0, 0, 0.5)";
         }
     };
 
