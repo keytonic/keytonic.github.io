@@ -31,5 +31,6 @@ Please check out my post at [GitHub](https://github.com/keytonic/React-Dialogs) 
 ![Prompt Dialog](https://raw.githubusercontent.com/keytonic/React-Dialogs/refs/heads/main/public/prompt.png)
 
 ## Customize
+---
 ![Custoize](https://raw.githubusercontent.com/keytonic/React-Dialogs/refs/heads/main/public/customize.png)
 
