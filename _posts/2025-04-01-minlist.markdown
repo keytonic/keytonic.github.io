@@ -16,10 +16,11 @@ excerpt_separator: <!-- excerpt-end -->
 
 ## MinList: A To-Do List That Works for You
 
-<!-- excerpt-start -->[MinList](https://minlist.net) is a minimalist to-do list web app designed to keep your tasks simple and your focus clear. Whether you're managing daily errands, tracking long-term projects, or just keeping up with ideas, MinList provides a clean, distraction-free experience that lets you get things done without unnecessary complexity. <!-- excerpt-end -->Made with following technologies:
+<!-- excerpt-start -->[MinList](https://minlist.net) is a minimalist to-do list web app designed to keep your tasks simple and your focus clear. Whether you're managing daily errands, tracking long-term projects, or just keeping up with ideas, MinList provides a clean, distraction-free experience that lets you get things done without unnecessary complexity. <!-- excerpt-end -->Made using the following tools:
 
 - [React](https://react.dev) with [Vite](https://vite.dev)
 - [Firestore](https://firebase.google.com/products/firestore)
+- [GitHub](https://github.com/keytonic/MinList)
 
 ## Why MinList?
 
