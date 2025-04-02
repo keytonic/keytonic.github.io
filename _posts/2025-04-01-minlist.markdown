@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "Introducing MinList: A Simpler Way to Stay Organized"
+date:   2025-04-01 00:00:00 -0500
+thumbnail: "/assets/dialogs_post.png"
+categories: Web Development
+permalink: /:categories/:year/:month/:day/:title:output_ext
+excerpt_begin_separator: <!-- excerpt-start -->
+excerpt_separator: <!-- excerpt-end -->
+---
+{% comment %} 
+    Thumbnails are 200x112, 16:9
+{% endcomment %}
+
+![MinList](https://raw.githubusercontent.com/keytonic/MinList/refs/heads/main/public/images/minlist.png)
+
+# MinList: A To-Do List That Works for You
+
+<!-- excerpt-start -->[MinList](https://minlist.net) is a minimalist to-do list web app designed to keep your tasks simple and your focus clear. Whether you're managing daily errands, tracking long-term projects, or just keeping up with ideas, MinList provides a clean, distraction-free experience that lets you get things done without unnecessary complexity. <!-- excerpt-end -->Made with following technologies:
+
+- [React](https://react.dev) with [Vite](https://vite.dev)
+- [Firestore](https://firebase.google.com/products/firestore)
+
+## Why MinList?
+
+In a world full of overcomplicated task managers, MinList takes a different approach:
+
+- **Minimalist Interface** – No clutter, no distractions. Just your tasks.
+- **Fast and Responsive** – Works seamlessly across devices.
+- **Smart Organization** – Simple yet effective categorization and prioritization.
+
+## Features
+
+- **Quick Add** – Add tasks effortlessly with a few keystrokes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/keytonic/MinList/refs/heads/main/public/images/Screenshot1.png" width="400px">
+
+
+- **Lists** - Create and manage multiple task lists
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/keytonic/MinList/refs/heads/main/public/images/Screenshot2.png" width="400px">
+
+- **Miscellaneous** - Hide completed tasks, choose background texture
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/keytonic/MinList/refs/heads/main/public/images/Screenshot3.png" width="400px">
+
+
+- **Installable** - Can be added to your device's home screen like a native app.
+- **Account creating** - Simple account creation or use google or facebook to login
+
+## Get Started
+
+Ready to simplify your workflow? Visit [MinList.net](https://minlist.net) and start organizing your tasks today.
+
+
+
+
