@@ -7,6 +7,8 @@ categories: Personal
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
+demo: https://www.andrewtowner.com
+github: https://github.com/keytonic/andrewtowner.com
 ---
 {% comment %} 
     Thumbnails are 200x112, 16:9

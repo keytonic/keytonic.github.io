@@ -7,6 +7,8 @@ categories: Web Development
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
+demo: https://www.minlist.net/
+github: https://github.com/keytonic/MinList.net
 ---
 {% comment %} 
     Thumbnails are 200x112, 16:9
@@ -29,7 +31,7 @@ In a world full of overcomplicated task managers, MinList takes a different appr
 - **Minimalist Interface** – No clutter, no distractions. Just your tasks.
 - **Fast and Responsive** – Works seamlessly across devices.
 - **Smart Organization** – Simple yet effective categorization and prioritization.
-
+ 
 ## Features
 
 - **Quick Add** – Add tasks effortlessly with a few keystrokes.

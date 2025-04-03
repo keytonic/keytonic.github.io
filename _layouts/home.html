@@ -30,8 +30,24 @@ layout: default
                                 {{ excerptParts[1] | strip_newlines | truncatewords: 50 }}
                             {%- endif -%}
                         </div>
-                        <div class="button_container">
-                            <a href="{{ post.url | relative_url }}" class="post_button">Read More</a>
+
+
+                        <div class="button_container_outer">
+                            {%- if post.github -%}
+                            <div class="button_container">
+                                <a href="{{ post.github | relative_url }}" class="post_button">GitHub</a>
+                            </div>
+                            {%- endif -%}
+
+                            {%- if post.demo -%}
+                            <div class="button_container">
+                                <a href="{{ post.demo | relative_url }}" class="post_button">Demo</a>
+                            </div>
+                            {%- endif -%}
+
+                            <div class="button_container">
+                                <a href="{{ post.url | relative_url }}" class="post_button">Read More</a>
+                            </div>
                         </div>
                     </div>
 

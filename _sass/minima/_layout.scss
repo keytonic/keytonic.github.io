@@ -541,16 +541,31 @@ a.flip-animate
 
 .button_container
 {
-    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+
+    @include media-query(650px)
+    {
+        margin-left: 0px;
+    }
+
+}
+
+.button_container_outer
+{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 
     @include media-query(650px)
     {
-        justify-content: center;
+        justify-content: space-evenly;
     }
+
 }
+
 
 .post_button
 {
@@ -728,3 +743,4 @@ i
 {
     font-style: normal;
 }
+

@@ -7,6 +7,7 @@ categories: Web Development
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
+demo: https://www.trappertom.com
 ---
 {% comment %} 
     Thumbnails are 200x112, 16:9

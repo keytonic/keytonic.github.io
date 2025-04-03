@@ -7,6 +7,9 @@ categories: WordPress
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
+github: https://github.com/keytonic/wp-login-mod
+demo: https://keytonic.org/wp-login.php
+
 ---
 {% comment %} 
     Thumbnails are 200x112, 16:9

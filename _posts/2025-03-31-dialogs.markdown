@@ -7,6 +7,8 @@ categories: React
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
+demo: https://keytonic.github.io/React-Dialogs/
+github: https://github.com/keytonic/React-Dialogs
 ---
 {% comment %} 
     Thumbnails are 200x112, 16:9
