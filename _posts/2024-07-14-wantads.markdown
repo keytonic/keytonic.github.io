@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Want Ads"
+date:   2024-07-14 00:00:00 -0500
+thumbnail: "/assets/want_ads_post.png"
+categories: Web Development
+permalink: /:categories/:year/:month/:day/:title:output_ext
+excerpt_begin_separator: <!-- excerpt-start -->
+excerpt_separator: <!-- excerpt-end -->
+demo: https://andrewtowner.com/projects/school/CS330/Week6/Assignment6
+github:
+---
+{% comment %} 
+    Thumbnails are 200x112, 16:9
+    900x504 -> 200x112 ctrl + shift p
+{% endcomment %}
+
+## Want Ads
+<!-- excerpt-start -->
+This app, built using JavaScript, CSS, and HTML, allows users to create and insert advertisements while providing a dropdown menu for easy selection and display of ads. As a Progressive Web App (PWA), it features Service Workers for offline capabilities, employs IndexedDB for efficient data storage, and includes a Manifest.json file to streamline installation.<!-- excerpt-end -->

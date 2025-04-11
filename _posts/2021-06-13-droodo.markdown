@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "droodo"
+date:   2021-06-13 00:00:00 -0500
+thumbnail: "/assets/droodo_post.png"
+categories: Web Development
+permalink: /:categories/:year/:month/:day/:title:output_ext
+excerpt_begin_separator: <!-- excerpt-start -->
+excerpt_separator: <!-- excerpt-end -->
+demo: https://andrewtowner.com/projects/droodo/options.php
+github:
+---
+{% comment %} 
+    Thumbnails are 200x112, 16:9
+    900x504 -> 200x112 ctrl + shift p
+{% endcomment %}
+
+## droodo
+<!-- excerpt-start -->
+A task manager designed like a ‘to-do list’. The name is a clever play on words, combining my name ‘Drew’ with ‘to-do’ to create ‘DrooDo’. I heavily utilized an app in the past called ‘Wunderlist’, however, Microsoft acquired it and discontinued it. The idea was to create a similar application, developed using PHP, MySQL, JavaScript, CSS, and HTML.
+<!-- excerpt-end -->

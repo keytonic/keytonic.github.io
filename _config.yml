@@ -12,11 +12,16 @@ github_username: keytonic
 facebook_username: keytonic
 instagram_username: drootown
 linkedin_username: townera
+strava: 1645425
 website_url: https://www.andrewtowner.com
 theme: minima
 #plugins:
 #  - jekyll-feed
-
+plugins: [jekyll-paginate]
 
 show_excerpts: true
 excerpt_separator: <!-- excerpt-end -->
+
+#gems: [jekyll-paginate]
+paginate: 6
+paginate_path: "/page:num/"

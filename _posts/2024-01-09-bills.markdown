@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Bill Tracker"
+date:   2024-01-09 00:00:00 -0500
+thumbnail: "/assets/bills_post.png"
+categories: Web Development
+permalink: /:categories/:year/:month/:day/:title:output_ext
+excerpt_begin_separator: <!-- excerpt-start -->
+excerpt_separator: <!-- excerpt-end -->
+demo: https://andrewtowner.com/projects/bills.v1/
+github:
+---
+{% comment %} 
+    Thumbnails are 200x112, 16:9
+    900x504 -> 200x112 ctrl + shift p
+{% endcomment %}
+
+## Bill Tracker
+<!-- excerpt-start -->
+For years, I managed my bills with a complex spreadsheet. I tried various bill tracking apps, but most focused on syncing with my bank, which wasn’t what I wanted. I needed a simple way to input and track my bills, so I built my own app using PHP, JavaScript, CSS, and HTML. Now I have a straightforward solution that meets my needs without unnecessary complications.<!-- excerpt-end -->

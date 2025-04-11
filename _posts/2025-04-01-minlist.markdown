@@ -12,6 +12,10 @@ github: https://github.com/keytonic/MinList.net
 ---
 {% comment %} 
     Thumbnails are 200x112, 16:9
+
+    900x504 -> 200x112 ctrl + shift p
+
+    
 {% endcomment %}
 
 ![MinList](https://raw.githubusercontent.com/keytonic/MinList/refs/heads/main/public/images/minlist.png)

@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Bill Tracker 2"
+date:   2024-10-25 00:00:00 -0500
+thumbnail: "/assets/bills2_post.png"
+categories: Web Development
+permalink: /:categories/:year/:month/:day/:title:output_ext
+excerpt_begin_separator: <!-- excerpt-start -->
+excerpt_separator: <!-- excerpt-end -->
+demo: https://andrewtowner.com/projects/bills.v2
+github:
+---
+{% comment %} 
+    Thumbnails are 200x112, 16:9
+    900x504 -> 200x112 ctrl + shift p
+{% endcomment %}
+
+## Bill Tracker 2
+<!-- excerpt-start -->
+This project provides a reliable, user-friendly tool for tracking and managing personal bills. Using PHP and MySQL for secure data handling, JavaScript for interactivity, and HTML/CSS with Bootstrap for responsive design, it offers a seamless, versatile experience for organizing finances on both desktop and mobile devices.<!-- excerpt-end -->

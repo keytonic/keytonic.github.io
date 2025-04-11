@@ -3,10 +3,12 @@ layout: default
 ---
 
 
+
+
 <div class="home">
     {{ content }}
-    {%- if paginator.posts.size > 0 -%}
-        {%- for post in paginator.posts -%}
+    {%- if site.posts.size > 0 -%}
+        {%- for post in site.posts -%}
             <div class="post_block">
                 <div class="post_title">
                     <a class="post_link" href="{{ post.url | relative_url }}">
@@ -31,6 +33,7 @@ layout: default
                                 {{ excerptParts[1] | strip_newlines | truncatewords: 50 }}
                             {%- endif -%}
                         </div>
+
 
                         <div class="button_container_outer">
                             {%- if post.github -%}
@@ -57,8 +60,4 @@ layout: default
         {%- endfor -%}
     {%- endif -%}
 </div>
-
-
-
-
 

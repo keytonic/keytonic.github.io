@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "1206"
+date:   2021-08-04 00:00:00 -0500
+thumbnail: "/assets/1206_post.png"
+categories: Web Development
+permalink: /:categories/:year/:month/:day/:title:output_ext
+excerpt_begin_separator: <!-- excerpt-start -->
+excerpt_separator: <!-- excerpt-end -->
+demo: https://andrewtowner.com/projects/bullets/
+github:
+---
+{% comment %} 
+    Thumbnails are 200x112, 16:9
+    900x504 -> 200x112 ctrl + shift p
+{% endcomment %}
+
+## 1206
+<!-- excerpt-start -->
+When working on a 1206, you often spend significant time managing PDF documents for multiple individuals. You frequently email various versions for review, leading to confusion and inefficiency. This solution provides a single source for managing awards, allowing users to save progress and easily resume from anywhere. Developed using PHP, JavaScript, CSS and HTML.<!-- excerpt-end -->

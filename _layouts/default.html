@@ -8,6 +8,33 @@
         {{ content }}
       </div>
     </main>
+
+    {% if page.title == "Blog" %}
+    <div class="pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">&lt;</a>
+            {% else %}
+            <span class="previous">&lt;</span>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                    <em class="page_current">{{ page }}</em>
+                {% elsif page == 1 %}
+                    <a class="page_number" href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">{{ page }}</a>
+                {% else %}
+                    <a class="page_number" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">&gt;</a>
+            {% else %}
+            <span class="next ">&gt;</span>
+            {% endif %}
+    </div>
+    {% endif %}
+
     {%- include footer.html -%}
   </body>
 </html>
