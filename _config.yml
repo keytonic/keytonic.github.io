@@ -27,8 +27,7 @@ paginate: 6
 paginate_path: "/page:num/"
 
 
-
-header_pages:
-  - about.markdown
-  - contact.markdown
-  - index.html
+#header_pages:
+ # - about.markdown
+ # - contact.markdown
+ # - index.html
