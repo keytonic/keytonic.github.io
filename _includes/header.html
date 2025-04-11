@@ -1,7 +1,7 @@
 <header class="site-header" id="site-header" role="banner">
     <div class="wrapper">
-        {%- assign default_paths = site.pages | map: "path" | uniq -%}
-        {%- assign page_paths = site.header_pages | default: default_paths | uniq -%}
+        {%- assign default_paths = site.pages | map: "path"  -%}
+        {%- assign page_paths = site.header_pages | default: default_paths  -%}
        
         <div class="flex-wrap">
             <div class="logo-wrapper">
@@ -25,8 +25,7 @@
                     </span>
                 </label>
                 <div class="trigger" id="primary">
-                  
-                    {%- for path in page_paths | uniq -%}
+                    {%- for path in page_paths}
                         {%- assign my_page = site.pages | where: "path", path | first -%}
                         {%- if my_page.title -%}
                             {% if my_page.title == page.title %}

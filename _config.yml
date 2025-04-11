@@ -25,3 +25,10 @@ excerpt_separator: <!-- excerpt-end -->
 #gems: [jekyll-paginate]
 paginate: 6
 paginate_path: "/page:num/"
+
+
+
+header_pages:
+  - about.markdown
+  - contact.markdown
+  - index.html
