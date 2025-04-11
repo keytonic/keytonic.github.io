@@ -2,6 +2,7 @@
     <div class="wrapper">
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths | uniq -%}
+        {%- assign page_paths = page_paths | uniq -%}
         <div class="flex-wrap">
             <div class="logo-wrapper">
                 <a class="logo-link" rel="author" href="{{ "/" | relative_url }}"><svg class="mylogo" width="50px"
