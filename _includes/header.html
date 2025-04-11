@@ -1,8 +1,8 @@
 <header class="site-header" id="site-header" role="banner">
     <div class="wrapper">
-        {%- assign default_paths = site.pages | map: "path" -%}
+        {%- assign default_paths = site.pages | map: "path" | uniq -%}
         {%- assign page_paths = site.header_pages | default: default_paths | uniq -%}
-        {%- assign page_paths = page_paths | uniq -%}
+       
         <div class="flex-wrap">
             <div class="logo-wrapper">
                 <a class="logo-link" rel="author" href="{{ "/" | relative_url }}"><svg class="mylogo" width="50px"
@@ -26,7 +26,7 @@
                 </label>
                 <div class="trigger" id="primary">
                   
-                    {%- for path in page_paths -%}
+                    {%- for path in page_paths | split: ',' | uniq -%}
                         {%- assign my_page = site.pages | where: "path", path | first -%}
                         {%- if my_page.title -%}
                             {% if my_page.title == page.title %}
