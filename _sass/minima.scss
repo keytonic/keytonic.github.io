@@ -1,6 +1,31 @@
 @charset "utf-8";
 
+*
+{
+    xfilter: invert(100%) !important;
+}
+
+
+
+:root 
+{
+    --color7:       #a7a7a7;
+    --color5:       #909090;
+    --color3:       #808080;
+    --color3-trans: #808080bf;
+    --color6:       #616161;/*post block background*/
+    --color2:       #333333;
+    --color4:       #990000;
+    --color4-trans: #99000080;
+    --color8:       #0f0f0f70;
+    --color1:       #000000;
+    --color1-trans: #00000080;
+    --color1-trans2:#000000bf;
+}
+
+
 $color1: #000000;
+$color11: #000000bf;
 $color2: #333333;
 $color3: #808080;
 $color5: #909090;
@@ -27,7 +52,6 @@ $table-text-align: left !default;
 
 // Width of the content area
 $content-width:    800px !default;
-
 $on-palm:          650px !default;
 $on-laptop:        800px !default;
 
@@ -47,3 +71,5 @@ $on-laptop:        800px !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+

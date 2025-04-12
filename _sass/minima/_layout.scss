@@ -2,9 +2,9 @@
 .site-header {
     height: $spacing-unit * 1.865;
     border-bottom: 0px;
-    background-color: #000000bf;
-    border-bottom: 1px solid hsla(354.09, 98.97%, 38.24%, 0.25);
-    box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
+    background-color: var(--color1-trans2);
+    border-bottom: 1px solid var(--color4-trans);
+    box-shadow: 0 0 16px 4px var(--color1-trans);
     z-index: 99;
 }
 
@@ -33,19 +33,19 @@
 {
     width: 32px;
     height: 32px;
-    fill: $color3;
+    fill: var(--color3);
 }
 
 .mylogo:hover
 {
-    fill:$color4 !important;
+    fill: var(--color4) !important;
     transition: transform 0.3s;
     transform: scale(1.5,1.5);
 }
 
 #hamburger:hover
 {
-    fill: $color4;
+    fill: var(--color4);
 }
 
 .site-header
@@ -71,7 +71,7 @@
   &,
   &:visited {
     font-weight: bold;
-    color: $color3;
+    color: var(--color3);
   }
 }
 
@@ -101,7 +101,7 @@ a.site-title
   }
 
   .page-link {
-    color: $color3;
+    color: var(--color3);
     text-decoration: none;
     line-height: $base-line-height;
 
@@ -114,11 +114,11 @@ a.site-title
     position: absolute;
     top: 9px;
     right: $spacing-unit * 0.5;
-    background-color: rgba(0, 0, 0, 0.7490196078);
+    background-color: var(--color1-trans);
     border-radius: 5px;
     text-align: right;
     align-items: flex-end;
-    box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 16px 4px var(--color1-trans);
 
     label[for="nav-trigger"] {
       display: block;
@@ -139,7 +139,7 @@ a.site-title
       text-align: center;
 
       > svg {
-        fill: $color3;
+        fill: var(--color3);
       }
     }
 
@@ -181,23 +181,22 @@ a.site-title
 
 hr
 {
-    border-top: 1px solid #4d4d4d;
-    border-bottom: 0px solid #4d4d4d;
+    border-top: 1px solid var(--color2);
+    border-bottom: 0px solid var(--color2);
     margin-bottom: 15px;
 }
 
 .site-footer {
   padding: $spacing-unit 0;
-  background-color: #000000bf;
-
-  border-top: 1px solid hsla(354.09, 98.97%, 38.24%, 0.25);
-  box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
+  background-color: var(--color1-trans2);
+  border-top: 1px solid var(--color4-trans);
+  box-shadow: 0 0 16px 4px var(--color1-trans);
 }
 
 .footer-heading {
   font-size: 15px;
   margin-top: $spacing-unit * 0.5;
-  color: $color3;
+  color: var(--color3);
   text-align: center;
   margin-bottom: 0px;
 }
@@ -210,7 +209,7 @@ hr
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $color3;
+  color: var(--color3);
   @extend %clearfix;
 }
 
@@ -230,8 +229,8 @@ hr
 .page-content 
 {
     flex: 1;
-    background-color: rgba(128, 128, 128, 0.75);
-    xbox-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.5);
+    background-color: var(--color3-trans);
+    xbox-shadow: 0 0 16px 4px var(--color1-trans);
     border-radius: 8px;
     width: calc(800px - 30px* 2);
 
@@ -270,7 +269,7 @@ hr
 
 .post-meta {
   font-size: $small-font-size;
-  color: $color1;
+  color: var(--color1);
 }
 
 .post-link {
@@ -327,7 +326,7 @@ hr
 }
 .page-link:hover 
 {
-    color: $color4;
+    color: var(--color4);
 }
 
 .flex-wrap
@@ -346,7 +345,7 @@ hr
 
 .social-media-list a
 {
-    color:$color3;
+    color:var(--color3);
     text-decoration: none !important;
     display: block;
     text-align: center;
@@ -358,13 +357,10 @@ hr
 {
     transition: transform 0.3s;
     transform: scale(2,2);
-    color: $color4;
+    color: var(--color4);
 }
 
-a.post-link:hover, a.post-link:visited
-{
-    color:#2a7ae2;
-}
+
 
 #primary
 {
@@ -388,7 +384,7 @@ a.post-link:hover, a.post-link:visited
         background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        background-image: linear-gradient(to right, $color4, $color4 50%, $color3 50%);
+        background-image: linear-gradient(to right, var(--color4), var(--color4) 50%, var(--color3) 50%);
 
         background-size: 200% 100%;
         background-position: -100%;
@@ -405,7 +401,7 @@ a.post-link:hover, a.post-link:visited
             bottom:-3px;
             z-index:0;
             position:absolute;
-            background:$color4;
+            background: var(--color4);
             transition: all 0.3s ease-in-out;
         }
         &:hover
@@ -421,7 +417,7 @@ a.post-link:hover, a.post-link:visited
 
     a.current-page
     {
-        background-image: linear-gradient(to right, $color4, $color4 50%, $color4 50%);
+        background-image: linear-gradient(to right, var(--color4), var(--color4) 50%, var(--color4) 50%);
     }
 }
 
@@ -438,7 +434,7 @@ a.flip-animate
         transition: transform 0.3s;
         transform-origin: 50% 0;
         transform-style: preserve-3d;
-        color:$color3;
+        color: var(--color3);
     }
     span:before 
     {
@@ -466,7 +462,7 @@ a.flip-animate
     span:hover:before,
     span:focus:before 
     {
-        color: $color4;
+        color: var(--color4);
         text-shadow: inherit;
     }
 }
@@ -484,27 +480,27 @@ a.flip-animate
 
 .post_title a
 {
-    color: #909090;
+    color: var(--color5);
 }
 
 .post_title a:hover
 {
     transition: all 0.4s;
-    color: $color4;
+    color: var(--color4);
 }
 
 .post_title
 {
-    background-image: linear-gradient(90deg, black, transparent);
+    background-image: linear-gradient(90deg, var(--color1), transparent);
 }
 .post_details
 {
     justify-content: space-between;
-    background-image: linear-gradient(90deg, #808080, transparent);
+    background-image: linear-gradient(90deg, var(--color3), transparent);
 }
 .post_excerpt
 {
-    background-image: linear-gradient(90deg, #616161, transparent);
+    background-image: linear-gradient(90deg, var(--color6), transparent);
     padding: 10px;
 
 
@@ -570,7 +566,7 @@ a.flip-animate
 .post_button
 {
     border-radius: 8px;
-    background-color: $color3;
+    background-color: var(--color3);
     padding: 0px 10px 0px 10px;
     min-height: 32px;
     display: flex;
@@ -580,23 +576,24 @@ a.flip-animate
 a.post_button
 {
     transition: all 0.4s;
-    color: $color1;
+    color: var(--color1);
     text-decoration: none;
 }
 
 a.post_button:hover
 {
-    transition: all 0.3s;
+
+    transition: all 0.5s;
     transform: scale(1.1,1.1);
-    color: $color5;
-    background-color: $color2;
+    color: var(--color5);
+    background-color: var(--color2);
 
     @include media-query(650px)
     {
     }
     @media screen and (min-width: 650px) 
     {
-        translate: -5px -2px 0px;
+        xtranslate: -5px -2px 0px;
     }
 }
 
@@ -611,7 +608,7 @@ img#thumb
 
 img#thumb:hover
 {
-    box-shadow: 0 0 0 .25rem rgba(153, 0, 0, .25) !important;
+    box-shadow: 0 0 0 .25rem var(--color4-trans) !important;
 }
 
 .post_excerpt_inner_innner
@@ -661,8 +658,8 @@ hr
 
     opacity: inherit;
 
-    border-top: 1px solid #4d4d4d;
-    border-bottom: 0px solid #4d4d4d;
+    border-top: 1px solid var(--color2);
+    border-bottom: 0px solid var(--color2);
     margin-bottom: 15px;
 
 }
@@ -678,20 +675,20 @@ hr
 
 .form-control:focus
 {
-    box-shadow: 0 0 0 .25rem rgba(153, 0, 0, .25) !important;
-    color: #a7a7a7;
+    box-shadow: 0 0 0 .25rem var(--color4-trans) !important;
+    color: var(--color7);
 }
 
 .form-control,
 #form-button
 {
-    background-color: #0f0f0f70 !important;
-    border: 1px solid black !important;
-    color: #a7a7a7;
+    background-color: var(--color8) !important;
+    border: 1px solid var(--color1) !important;
+    color: var(--color7);
 }
 .form-control::placeholder
 {
-    color: #a7a7a7;
+    color: var(--color7);
     opacity: 1; /* Firefox */
 }
 
@@ -703,8 +700,8 @@ hr
 {
     transition: all 0.3s;
     transform: scale(1.2, 1.2);
-    color: red;
-    background-color: #333333;
+    color: var(--color4);
+    background-color: var(--color2);
 }
 .bi::before
 {
@@ -758,7 +755,6 @@ input:-webkit-autofill:focus {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    xbackground-color: #6f6f6f;
     margin-bottom: 20px;
     width: 740px;
     margin-right: auto;
@@ -772,7 +768,7 @@ input:-webkit-autofill:focus {
 .page_current
 {
     xpadding: 10px;
-    background-color: #6f6f6f;
+    background-color: var(--color3-trans);
     border-radius: 8px;
     min-width: 32px;
     min-height: 32px;
@@ -790,11 +786,27 @@ input:-webkit-autofill:focus {
 
 .page_current
 {
-    color: #990000;
+    color: var(--color4);
+    background-color: var(--color1);
+    font-weight: bold;
 }
 
 .next,
 .previous
 {
+    font-family: monospace;
+}
+
+.page_number:hover,
+.next:hover,
+.previous:hover
+{
+    transition: all 0.3s;
+
+    transform: scale(1.2, 1.2);
+
+    color: var(--color4);
+    background-color: var(--color1);
+    font-weight: bold;
     font-family: monospace;
 }

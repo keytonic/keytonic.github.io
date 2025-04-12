@@ -8,8 +8,8 @@ dl, dd, ol, ul, figure {
 
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $color2;
+  color: var(--color1);
+  background-color: var(--color2);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -20,13 +20,14 @@ body {
   min-height: 100vh;
   flex-direction: column;
 
-  background: $color2 url("/assets/gplay.png") repeat fixed;
+  background: var(--color2) url("/assets/gplay.png") repeat fixed;
 
 }
 
 html
 {
-    scrollbar-color: #606060 #000000;
+    scrollbar-color: var(--color3) var(--color1);
+    scrollbar-width: thin;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -69,17 +70,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: $color1;
+  color: var(--color1);
   text-decoration: none;
   font-weight: bold;
 
   &:visited {
-    color: $color1;
+    color: var(--color1);
   }
 
   &:hover {
     transition: all 0.4s;
-    color: $color4;
+    color: var(--color4);
   }
 
   .social-media-list &:hover {
@@ -105,7 +106,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: var(--color5);
 }
 
 code {
@@ -153,21 +154,21 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: $color3;
+    fill: var(--color3);
     padding-right: 5px;
     vertical-align: text-top;
 }
 
 .svg-icon:hover
 {
-    fill:$color4;
+    fill:var(--color4);
 }
 
 table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
   tr {
