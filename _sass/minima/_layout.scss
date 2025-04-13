@@ -935,3 +935,10 @@ input[type="color"]::-webkit-color-swatch {
     fill: var(--color3);
 }
 
+#theme-mode:hover,
+.menu-icon2:hover > svg
+{
+    transition: transform 0.3s;
+    transform: scale(1.5, 1.5);
+    fill: var(--color4);
+}
