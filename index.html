@@ -14,3 +14,20 @@ title: Blog
 Hey there! I’m Andrew Towner, a web developer who loves turning ideas into functional, beautiful websites and apps. This blog is where I share the projects I’ve built, the challenges I’ve tackled, and the creative process behind my work. Whether it’s experimenting with new technologies, optimizing performance, or designing intuitive user experiences, I’m always building something and I can’t wait to share it with you!
 <br />
 <br />
+
+<script>
+
+let theme = localStorage.getItem("theme");
+
+if(theme == "dark" )
+{
+    document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
+}
+else if(theme == "light" )
+{
+    document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
+}
+
+
+
+</script>

@@ -2,12 +2,13 @@
 
 *
 {
-    xfilter: invert(100%) !important;
+    //xfilter: invert(100%) !important;
+    //transition: color 4s ease;
 }
 
 
 
-:root 
+:root
 {
     --color7:       #a7a7a7;
     --color5:       #909090;
@@ -21,15 +22,33 @@
     --color1:       #000000;
     --color1-trans: #00000080;
     --color1-trans2:#000000bf;
+    --bg-image: url('/assets/bg-dark.png');
 }
 
+:root-
+{
+	--color7: #645e64;
+	--color5: #eaeef0;
+	--color3: #505050;
+	--color3-trans: #f6f8fabf;
+	--color6: #c1c7cd;
+	--color2: #c1c7cd;
+	--color4: #1463ff;
+	--color4-trans: #1463ff80;
+	--color8: #d1d9e0;
+	--color1: #505050;
+	--color1-trans: #99999980;
+	--color1-trans2: #f6f8fabf;
+    --bg-image: url('/assets/bg-light.png');
+}
 
+/*
 $color1: #000000;
 $color11: #000000bf;
 $color2: #333333;
 $color3: #808080;
 $color5: #909090;
-$color4: #990000;
+$color4: #990000;*/
 // Define defaults for each variable.
 
 $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;

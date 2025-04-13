@@ -20,13 +20,13 @@ body {
   min-height: 100vh;
   flex-direction: column;
 
-  background: var(--color2) url("/assets/gplay.png") repeat fixed;
+  background: var(--color2) var(--bg-image) repeat fixed;
 
 }
 
 html
 {
-    scrollbar-color: var(--color3) var(--color1);
+    scrollbar-color: var(--color3) var(--color2);
     scrollbar-width: thin;
 }
 

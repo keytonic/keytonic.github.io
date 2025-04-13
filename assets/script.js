@@ -5,6 +5,8 @@ window.onload = function ()
     const nav_trigger = document.getElementById("nav-trigger");
     const header = document.getElementById("site-header");
 
+    setTheme();
+
     window.onscroll = function()
     {
         if (window.scrollY > 0) 
@@ -19,15 +21,26 @@ window.onload = function ()
 
     document.onclick = function(event)
     {
-        if(event.target.id != "nav-trigger" && nav_trigger.checked == true)
+
+        if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
+        {
+            if(localStorage.getItem("theme") == "light")
+            {
+                localStorage.setItem("theme","dark");
+            }
+            else
+            {
+                localStorage.setItem("theme","light");
+            }
+            setTheme();
+            //console.log(event.target.id);
+        }
+        if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
         {
             nav_trigger.checked = false;
-            nav.style.boxShadow = "";
+            //nav.style.boxShadow = "";
         }
-        else
-        {
-            //nav.style.boxShadow = "0 0 16px 4px rgba(0, 0, 0, 0.5)";
-        }
+        
     };
 
     document.onresize = function()
@@ -35,7 +48,7 @@ window.onload = function ()
         if(nav_trigger.checked == true)
         {
             nav_trigger.checked = false;
-            nav.style.boxShadow = "";
+            //nav.style.boxShadow = "";
         }
     };
 
@@ -44,7 +57,7 @@ window.onload = function ()
         if(nav_trigger.checked == true)
         {
             nav_trigger.checked = false;
-            nav.style.boxShadow = "";
+           // nav.style.boxShadow = "";
         }
     };
 
@@ -53,10 +66,15 @@ window.onload = function ()
     let a = document.getElementById("logo");
     let t = document.getElementById("logot");
 
+    //let red = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4');
+    //let grey = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3');
+    let red = localStorage.getItem("color4") == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4') : localStorage.getItem("color4");
+    let grey = localStorage.getItem("color3") == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3') : localStorage.getItem("color3");
+
     andrew.addEventListener("mouseover", function() 
     {
-        a.style.fill = "#990000";//red
-        t.style.fill = "#666666";//grey
+        a.style.fill = red;//red
+        t.style.fill = grey;//grey
 
     });
     andrew.addEventListener("mouseout", function() 
@@ -67,8 +85,8 @@ window.onload = function ()
 
     towner.addEventListener("mouseover", function() 
     {
-        a.style.fill = "#666666";//grey
-        t.style.fill = "#990000";//red
+        a.style.fill = grey;//grey
+        t.style.fill = red;//red
     });
     towner.addEventListener("mouseout", function() 
     {
@@ -98,6 +116,42 @@ window.onload = function ()
         document.getElementById("form-message").addEventListener('focus', handleClick, false);
         document.getElementById("form-message").addEventListener('blur', handleBlur, false);
     }
+
+    setColorFromLocalstorage("color7");
+    setColorFromLocalstorage("color5");
+    setColorFromLocalstorage("color3");
+    setColorFromLocalstorage("color3-trans");
+    setColorFromLocalstorage("color6");
+    setColorFromLocalstorage("color2");
+    setColorFromLocalstorage("color4");
+    setColorFromLocalstorage("color4-trans");
+    setColorFromLocalstorage("color8");
+    setColorFromLocalstorage("color1");
+    setColorFromLocalstorage("color1-trans");
+    setColorFromLocalstorage("color1-trans2");
+}
+
+function setColorFromLocalstorage(name = null)
+{
+    if(name == null) return;
+
+    let color = localStorage.getItem(name);
+
+    if(color == null) return;
+
+    document.querySelector(':root').style.setProperty('--' + name, color);
+
+    //console.log(`color: ${'--' + name} set to: ${color}`);
+}
+
+function setColor(name = null, color = "")
+{
+    if(name == null || color == "") return;
+
+    document.querySelector(':root').style.setProperty('--' + name, color);
+    //localStorage.setItem(name, color);
+
+    //console.log(`color: ${'--' + name} set to: ${color}`);
 }
 
 function handleClick(event)
@@ -168,4 +222,53 @@ function handleSubmit(event)
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         http.send(`name=${name.value}&phone=${phone.value}&email=${email.value}&message=${message.value}`);
     }
+}
+
+function setTheme()
+{
+    let theme = localStorage.getItem("theme");
+
+    if(theme == null) return;
+
+    switch (theme) 
+    {
+        case "dark":
+            document.getElementById("home-title") != null ? document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>" : "";
+            document.getElementById("moon").style.display = "none";
+            document.getElementById("sun").style.display = "inline";
+            setColor("color7","#a7a7a7");
+            setColor("color5","#909090");
+            setColor("color3","#808080");
+            setColor("color3-trans","#808080bf");
+            setColor("color6","#616161");
+            setColor("color2","#333333");
+            setColor("color4","#990000");
+            setColor("color4-trans","#99000080");
+            setColor("color8","#0f0f0f70");
+            setColor("color1","#000000");
+            setColor("color1-trans","#00000080");
+            setColor("color1-trans2","#000000bf");
+            setColor("bg-image",'url("/assets/bg-dark.png")');
+          break;
+        case "light":
+            document.getElementById("home-title") != null ? document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>" : "";
+            document.getElementById("sun").style.display = "none";
+            document.getElementById("moon").style.display = "inline";
+            setColor("color7","#645e64");
+            setColor("color5","#eaeef0");
+            setColor("color3","#505050");
+            setColor("color3-trans","#f6f8fabf");
+            setColor("color6","#c1c7cd");
+            setColor("color2","#c1c7cd");
+            setColor("color4","#1463ff");
+            setColor("color4-trans","#1463ff80");
+            setColor("color8","#d1d9e0");
+            setColor("color1","#505050");
+            setColor("color1-trans","#99999980");
+            setColor("color1-trans2","#f6f8fabf");
+            setColor("bg-image",'url("/assets/bg-light.png")');
+          break;
+        default:
+          break;
+      }
 }

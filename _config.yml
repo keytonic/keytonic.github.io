@@ -31,3 +31,4 @@ header_pages:
   - about.markdown
   - contact.markdown
   - index.html
+#  - options.markdown
