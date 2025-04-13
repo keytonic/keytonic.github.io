@@ -33,6 +33,7 @@ window.onload = function ()
                 localStorage.setItem("theme","light");
             }
             setTheme();
+            //location.reload();
             //console.log(event.target.id);
         }
         if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
@@ -271,4 +272,6 @@ function setTheme()
         default:
           break;
       }
+
+     
 }
