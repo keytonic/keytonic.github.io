@@ -5,7 +5,32 @@ window.onload = function ()
     const nav_trigger = document.getElementById("nav-trigger");
     const header = document.getElementById("site-header");
 
-    setTheme();
+    document.onclick = function(event)
+    {
+
+        if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
+        {
+            let blogTitle = document.getElementById("home-title");
+
+            if(localStorage.getItem("theme") == "light")
+            {
+                localStorage.setItem("theme","dark");
+                document.body.classList.remove("light");
+                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
+            }
+            else
+            {
+                localStorage.setItem("theme","light");
+                document.body.classList.add("light");
+                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
+            }
+        }
+        if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
+        {
+            nav_trigger.checked = false;
+            //nav.style.boxShadow = "";
+        }
+    };
 
     window.onscroll = function()
     {
@@ -17,31 +42,6 @@ window.onload = function ()
         {
             header.classList.remove('sticky');
         }
-    };
-
-    document.onclick = function(event)
-    {
-
-        if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
-        {
-            if(localStorage.getItem("theme") == "light")
-            {
-                localStorage.setItem("theme","dark");
-            }
-            else
-            {
-                localStorage.setItem("theme","light");
-            }
-            setTheme();
-            //location.reload();
-            //console.log(event.target.id);
-        }
-        if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
-        {
-            nav_trigger.checked = false;
-            //nav.style.boxShadow = "";
-        }
-        
     };
 
     document.onresize = function()
@@ -130,6 +130,7 @@ window.onload = function ()
     setColorFromLocalstorage("color1");
     setColorFromLocalstorage("color1-trans");
     setColorFromLocalstorage("color1-trans2");
+    
 }
 
 function setColorFromLocalstorage(name = null)
@@ -227,6 +228,23 @@ function handleSubmit(event)
 
 function setTheme()
 {
+    
+
+    if(localStorage.getItem("theme") == "light")
+    {
+        //localStorage.setItem("theme","dark");
+        document.body.classList.add("light");
+
+    }
+    else
+    {
+        //localStorage.setItem("theme","light");
+        document.body.classList.remove("light");
+
+    }
+
+
+    /*
     let theme = localStorage.getItem("theme");
 
     if(theme == null) return;
@@ -271,7 +289,7 @@ function setTheme()
           break;
         default:
           break;
-      }
+      }*/
 
      
 }

@@ -19,14 +19,11 @@ Hey there! I’m Andrew Towner, a web developer who loves turning ideas into fun
 
 let theme = localStorage.getItem("theme");
 
-if(theme == "dark" )
+if(theme != null )
 {
-    document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
+    document.getElementById("home-title").innerHTML = `<strong>A Blog in the ${theme[0].toUpperCase() + theme.substring(1)}</strong>`;
 }
-else if(theme == "light" )
-{
-    document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
-}
+
 
 
 
