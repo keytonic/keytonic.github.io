@@ -17,12 +17,17 @@ window.onload = function ()
                 localStorage.setItem("theme","dark");
                 document.body.classList.remove("light");
                 if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
+                document.getElementById("sun").style.display = "inline";
+                document.getElementById("moon").style.display = "none";
+
             }
             else
             {
                 localStorage.setItem("theme","light");
                 document.body.classList.add("light");
                 if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
+                document.getElementById("sun").style.display = "none";
+                document.getElementById("moon").style.display = "inline";
             }
         }
         if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
@@ -67,13 +72,31 @@ window.onload = function ()
     let a = document.getElementById("logo");
     let t = document.getElementById("logot");
 
-    //let red = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4');
-    //let grey = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3');
-    let red = localStorage.getItem("color4") == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4') : localStorage.getItem("color4");
-    let grey = localStorage.getItem("color3") == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3') : localStorage.getItem("color3");
+    let red = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4');
+    let grey = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3');
+    //let red = localStorage.getItem("color4") == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4') : localStorage.getItem("color4");
+    //let grey = localStorage.getItem("color3") == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3') : localStorage.getItem("color3");
+
+
+
+
+
+
 
     andrew.addEventListener("mouseover", function() 
     {
+
+        if(localStorage.getItem("theme") == "light")
+        {
+            red = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color4');
+            grey = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color3');
+        }
+        else
+        {
+            red = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4');
+            grey = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3');
+        }
+        
         a.style.fill = red;//red
         t.style.fill = grey;//grey
 
@@ -86,6 +109,18 @@ window.onload = function ()
 
     towner.addEventListener("mouseover", function() 
     {
+
+        if(localStorage.getItem("theme") == "light")
+        {
+            red = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color4');
+            grey = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color3');
+        }
+        else
+        {
+            red = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4');
+            grey = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3');
+        }
+
         a.style.fill = grey;//grey
         t.style.fill = red;//red
     });
@@ -228,68 +263,12 @@ function handleSubmit(event)
 
 function setTheme()
 {
-    
-
     if(localStorage.getItem("theme") == "light")
     {
-        //localStorage.setItem("theme","dark");
         document.body.classList.add("light");
-
     }
     else
     {
-        //localStorage.setItem("theme","light");
         document.body.classList.remove("light");
-
     }
-
-
-    /*
-    let theme = localStorage.getItem("theme");
-
-    if(theme == null) return;
-
-    switch (theme) 
-    {
-        case "dark":
-            document.getElementById("home-title") != null ? document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>" : "";
-            document.getElementById("moon").style.display = "none";
-            document.getElementById("sun").style.display = "inline";
-            setColor("color7","#a7a7a7");
-            setColor("color5","#909090");
-            setColor("color3","#808080");
-            setColor("color3-trans","#808080bf");
-            setColor("color6","#616161");
-            setColor("color2","#333333");
-            setColor("color4","#990000");
-            setColor("color4-trans","#99000080");
-            setColor("color8","#0f0f0f70");
-            setColor("color1","#000000");
-            setColor("color1-trans","#00000080");
-            setColor("color1-trans2","#000000bf");
-            setColor("bg-image",'url("/assets/bg-dark.png")');
-          break;
-        case "light":
-            document.getElementById("home-title") != null ? document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>" : "";
-            document.getElementById("sun").style.display = "none";
-            document.getElementById("moon").style.display = "inline";
-            setColor("color7","#645e64");
-            setColor("color5","#eaeef0");
-            setColor("color3","#505050");
-            setColor("color3-trans","#f6f8fabf");
-            setColor("color6","#c1c7cd");
-            setColor("color2","#c1c7cd");
-            setColor("color4","#1463ff");
-            setColor("color4-trans","#1463ff80");
-            setColor("color8","#d1d9e0");
-            setColor("color1","#505050");
-            setColor("color1-trans","#99999980");
-            setColor("color1-trans2","#f6f8fabf");
-            setColor("bg-image",'url("/assets/bg-light.png")');
-          break;
-        default:
-          break;
-      }*/
-
-     
 }
