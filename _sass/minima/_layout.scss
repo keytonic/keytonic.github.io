@@ -913,7 +913,7 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     margin-left: 20px;
     cursor: pointer;
-    transition: none;
+    xtransition: none;
 
 
     @include media-query($on-palm)
