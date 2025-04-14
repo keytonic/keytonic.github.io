@@ -2,7 +2,7 @@
 
 *
 {
-    transition: all 0.5s ease;
+    transition: color .2s, fill .2s, background-color .2s, box-shadow .2s;
 }
 
 :root
@@ -30,8 +30,8 @@
 	--color3-trans: #f6f8fabf;
 	--color6: #c1c7cd;
 	--color2: #c1c7cd;
-	--color4: #1463ff;
-	--color4-trans: #1463ff80;
+	--color4: #00c4ff;
+	--color4-trans: #00c4ff;
 	--color8: #d1d9e0;
 	--color1: #505050;
 	--color1-trans: #99999980;

@@ -122,9 +122,9 @@ a.site-title
   }
 
   @include media-query($on-palm) {
-    position: absolute;
+    /*position: absolute;
     top: 10px;
-    right: 10px;
+    right: 10px;*/
     
     border-radius: 5px;
     text-align: right;
@@ -187,6 +187,9 @@ a.site-title
         padding: 20px;
         gap: 10px;
         border-radius: 5px;
+        position: fixed;
+        top: 60px;
+        right: 5px;
     }
 
     #primary a 
@@ -269,7 +272,7 @@ hr
 
     margin: auto;
     margin-top: 20px;
-    xmargin-bottom: 20px;
+    margin-bottom: 20px;
 
     @include media-query(800px) 
     {
@@ -277,7 +280,9 @@ hr
     }
     @include media-query(650px)
     {
-        margin: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
         border-radius: 0 !important;
         width:auto;
     }
@@ -368,6 +373,8 @@ hr
     height: 55.95px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
 
 .social-media-list
@@ -404,7 +411,7 @@ hr
     flex-direction: row;
     align-items:center;
     justify-content:center;
-    height:100%;
+    xheight:100%;
     position:relative;
 
     a{
@@ -421,7 +428,7 @@ hr
 
         background-size: 200% 100%;
         background-position: -100%;
-        transition: all 0.3s ease-in-out;
+        xtransition: all 0.3s ease-in-out;
 
         &:before
         {
@@ -435,7 +442,7 @@ hr
             z-index:0;
             position:absolute;
             background: var(--color4);
-            transition: all 0.3s ease-in-out;
+            xtransition: all 0.3s ease-in-out;
         }
         &:hover
         {
@@ -519,8 +526,8 @@ a.flip-animate
 .post_title a:hover
 {
     transition: all 0.4s;
-    xcolor: var(--color4);
-    text-shadow: -1px -1px 2px var(--color4), 1px -1px 2px var(--color4), -1px 1px 2px var(--color4), 1px 1px 2px var(--color4);
+    color: var(--color4);
+    //text-shadow: -1px -1px 2px var(--color4), 1px -1px 2px var(--color4), -1px 1px 2px var(--color4), 1px 1px 2px var(--color4);
 }
 
 .post_title
@@ -795,6 +802,13 @@ input:-webkit-autofill:focus {
     margin-right: auto;
     margin-left: auto;
     border-radius: 8px;
+
+    margin-top: 0px;
+
+    @include media-query($on-palm)
+    {
+        margin-top: 20px;
+    }
 }
 
 .page_number,
@@ -905,13 +919,28 @@ input[type="color"]::-webkit-color-swatch {
 
 .menu-icon2
 {
+    width: 36px;
+    height: 36px;
+    line-height: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+
+    @include media-query($on-palm)
+    {
+        margin-left: 0px;
+    }
+
+    /*
     height: 100%;
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
+    xmargin-left: 20px;
     cursor: pointer;
     xtransition: none;
 
@@ -930,7 +959,7 @@ input[type="color"]::-webkit-color-swatch {
         right: 46px;
         margin-left: 0px;
     }
-    
+    */
 }
 
 .menu-icon2 > svg
@@ -941,7 +970,27 @@ input[type="color"]::-webkit-color-swatch {
 #theme-mode:hover,
 .menu-icon2:hover > svg
 {
+    
     transition: transform 0.3s;
-    transform: scale(1.5, 1.5);
+    transform: scale(1.7, 1.7);
     fill: var(--color4);
+
+
+}
+
+
+#another-container
+{
+    xwidth: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include media-query($on-palm)
+    {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    }
 }
