@@ -282,7 +282,7 @@ hr
     {
         margin-left: 0 !important;
         margin-right: 0 !important;
-        margin-bottom: 0 !important;
+        xmargin-bottom: 0 !important;
         border-radius: 0 !important;
         width:auto;
     }
@@ -807,7 +807,7 @@ input:-webkit-autofill:focus {
 
     @include media-query($on-palm)
     {
-        margin-top: 20px;
+        xmargin-top: 20px;
     }
 }
 
