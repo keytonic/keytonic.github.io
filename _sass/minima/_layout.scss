@@ -269,7 +269,7 @@ hr
 
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    xmargin-bottom: 20px;
 
     @include media-query(800px) 
     {
@@ -789,8 +789,9 @@ input:-webkit-autofill:focus {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 20px;
-    width: 740px;
+    margin: 20px;
+    //width: 740px;
+    max-width: calc(800px - (30px));
     margin-right: auto;
     margin-left: auto;
     border-radius: 8px;
@@ -926,7 +927,7 @@ input[type="color"]::-webkit-color-swatch {
         align-items: center;
         position: fixed;
         top: 10px;
-        xright: 46px;
+        right: 46px;
         margin-left: 0px;
     }
     
