@@ -9,7 +9,7 @@ window.onload = function ()
     document.ontouchstart = (event) => 
     {
         console.log(`touch start: ${event.target.id}`);
-
+/*
         let elements = document.getElementsByTagName("svg");
 
         for (let i = 0; i < elements.length; i++) 
@@ -17,7 +17,7 @@ window.onload = function ()
             elements[i].style.transform = "scale(1,1)";
             elements[i].style.fill = "var(--color3)";
         }
-
+*/
 
     };
 
@@ -25,14 +25,6 @@ window.onload = function ()
     { 
         console.log(`touch end: ${event.target.id}`);
 
-
-        let elements = document.getElementsByTagName("svg");
-
-        for (let i = 0; i < elements.length; i++) 
-        {
-            elements[i].style.transform = "scale(1,1)";
-            elements[i].style.fill = "var(--color3)";
-        }
     };
 
     document.touchcancel = (event) => 

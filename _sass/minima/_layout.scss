@@ -36,14 +36,14 @@
     fill: var(--color3);
 }
 
-.mylogo:hover
+.mylogo:hover, .mylogo:active
 {
     fill: var(--color4);
     transition: transform 0.3s;
     transform: scale(1.5,1.5);
 }
 
-#hamburger:hover
+#hamburger:hover, #hamburger:active
 {
     fill: var(--color4);
 }
@@ -968,7 +968,8 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 #theme-mode:hover,
-.menu-icon2:hover > svg
+.menu-icon2:hover > svg,
+#theme-mode:active
 {
     transition: transform 0.3s;
     transform: scale(1.7, 1.7);
