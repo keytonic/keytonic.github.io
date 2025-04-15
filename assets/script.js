@@ -5,12 +5,19 @@ window.onload = function ()
     const nav_trigger = document.getElementById("nav-trigger");
     const header = document.getElementById("site-header");
 
+/*
+    document.ontouchstart = (event) => 
+    { 
 
-    document.ontouchstart = (event) => { alert("TouchStart"); };
-    document.ontouchend = (event) => { alert("TouchEnd"); };
+
+    };
+    document.ontouchend = (event) => 
+    { 
+
+    };*/
 
 
-    document.onclick = function(event)
+    document.onclick = document.ontouchend = (event) =>
     {
 
         if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
@@ -34,15 +41,17 @@ window.onload = function ()
                 document.getElementById("sun").style.display = "none";
                 document.getElementById("moon").style.display = "inline";
             }
+            event.preventDefault();
         }
         if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
         {
             nav_trigger.checked = false;
             //nav.style.boxShadow = "";
+            event.preventDefault();
         }
     };
 
-    window.onscroll = function()
+    window.onscroll = () =>
     {
         if (window.scrollY > 0) 
         {
@@ -54,7 +63,7 @@ window.onload = function ()
         }
     };
 
-    document.onresize = function()
+    document.onresize = () =>
     {
         if(nav_trigger.checked == true)
         {
@@ -63,7 +72,7 @@ window.onload = function ()
         }
     };
 
-    window.onresize = function()
+    window.onresize = () =>
     {
         if(nav_trigger.checked == true)
         {
@@ -88,7 +97,7 @@ window.onload = function ()
 
 
 
-    andrew.addEventListener("mouseover", function() 
+    andrew.addEventListener("mouseover", () =>
     {
 
         if(localStorage.getItem("theme") == "light")
@@ -106,13 +115,13 @@ window.onload = function ()
         t.style.fill = grey;//grey
 
     });
-    andrew.addEventListener("mouseout", function() 
+    andrew.addEventListener("mouseout", () =>
     {
         a.style.fill = "inherit";
         t.style.fill = "transparent";
     });
 
-    towner.addEventListener("mouseover", function() 
+    towner.addEventListener("mouseover", () =>
     {
 
         if(localStorage.getItem("theme") == "light")
@@ -129,7 +138,7 @@ window.onload = function ()
         a.style.fill = grey;//grey
         t.style.fill = red;//red
     });
-    towner.addEventListener("mouseout", function() 
+    towner.addEventListener("mouseout", () =>
     {
         a.style.fill = "inherit";
         t.style.fill = "transparent";
@@ -244,7 +253,7 @@ function handleSubmit(event)
 
         var http = new XMLHttpRequest();
 
-        http.onreadystatechange = function () 
+        http.onreadystatechange = () =>
         {
             if (this.readyState == 4)
             {
