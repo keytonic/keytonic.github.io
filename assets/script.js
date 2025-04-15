@@ -7,17 +7,37 @@ window.onload = function ()
 
 
     document.ontouchstart = (event) => 
-    { 
+    {
+        console.log(`touch start: ${event.target.id}`);
 
-        console.log("touch start");
+        let elements = document.getElementsByTagName("svg");
+
+        for (let i = 0; i < elements.length; i++) 
+        {
+            elements[i].style.transform = "scale(1,1)";
+            elements[i].style.fill = "var(--color3)";
+        }
+
+
     };
+
     document.ontouchend = (event) => 
     { 
-        console.log("touch end");
+        console.log(`touch end: ${event.target.id}`);
 
-        document.getElementById("hamburger").style.transform = "scale(1, 1)";
-        document.getElementById("theme-mode").style.transform = "scale(1, 1)";
-        document.getElementById("mylogo").style.transform = "scale(1, 1)";
+
+        let elements = document.getElementsByTagName("svg");
+
+        for (let i = 0; i < elements.length; i++) 
+        {
+            elements[i].style.transform = "scale(1,1)";
+            elements[i].style.fill = "var(--color3)";
+        }
+    };
+
+    document.touchcancel = (event) => 
+    {
+        console.log(`touch cancel: ${event.target.id}`);
     };
 
 

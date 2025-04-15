@@ -38,7 +38,7 @@
 
 .mylogo:hover
 {
-    fill: var(--color4) !important;
+    fill: var(--color4);
     transition: transform 0.3s;
     transform: scale(1.5,1.5);
 }
