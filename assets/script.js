@@ -9,7 +9,6 @@ window.onload = function ()
     document.ontouchstart = (event) => 
     { 
 
-
     };
     document.ontouchend = (event) => 
     { 
@@ -17,7 +16,7 @@ window.onload = function ()
     };*/
 
 
-    document.onclick = document.ontouchstart = (event) =>
+    document.ontouchstart = (event) =>
     {
 
         if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
