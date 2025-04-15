@@ -17,7 +17,7 @@ window.onload = function ()
     };*/
 
 
-    document.onclick = document.ontouchend = (event) =>
+    document.onclick = document.ontouchstart = (event) =>
     {
 
         if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
