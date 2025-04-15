@@ -5,6 +5,11 @@ window.onload = function ()
     const nav_trigger = document.getElementById("nav-trigger");
     const header = document.getElementById("site-header");
 
+
+    document.ontouchstart = (event) => { alert("TouchStart"); };
+    document.ontouchend = (event) => { alert("TouchEnd"); };
+
+
     document.onclick = function(event)
     {
 
