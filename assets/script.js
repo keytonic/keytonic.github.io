@@ -5,15 +5,20 @@ window.onload = function ()
     const nav_trigger = document.getElementById("nav-trigger");
     const header = document.getElementById("site-header");
 
-/*
+
     document.ontouchstart = (event) => 
     { 
 
+        console.log("touch start");
     };
     document.ontouchend = (event) => 
     { 
+        console.log("touch end");
 
-    };*/
+        document.getElementById("hamburger").style.transform = "scale(1, 1)";
+        document.getElementById("theme-mode").style.transform = "scale(1, 1)";
+        document.getElementById("mylogo").style.transform = "scale(1, 1)";
+    };
 
 
     document.onclick = (event) =>
@@ -46,7 +51,7 @@ window.onload = function ()
         {
             nav_trigger.checked = false;
             //nav.style.boxShadow = "";
-            event.preventDefault();
+            //event.preventDefault();
         }
     };
 
