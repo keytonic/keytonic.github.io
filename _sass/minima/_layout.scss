@@ -1006,8 +1006,9 @@ input[type="color"]::-webkit-color-swatch {
     }
 }
 
+/*    */
 /*@media (hover: none) */
-@media all and (hover: none)
+@media (hover: none) or (pointer: coarse) or (pointer: fine)
 {
     #theme-mode:hover,
     .menu-icon2:hover > svg
