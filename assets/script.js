@@ -20,7 +20,7 @@ window.onload = function ()
     {
         console.log(`click: ${event.target.id}`);
 
-        quasiClick(event);
+        quasiClick(event,1);
 
     }, { passive: false });
 
@@ -37,7 +37,7 @@ window.onload = function ()
     document.addEventListener("touchstart", (event) => 
     {
         console.log(`touch start: ${event.target.id}`);
-        quasiClick(event);
+        quasiClick(event,2);
         //event.preventDefault();
     }, { passive: false });
 
@@ -303,19 +303,46 @@ function setTheme()
     }
 }
 
-function quasiClick(event)
+function quasiClick(event,func=0)
 {
     const nav_trigger = document.getElementById("nav-trigger");
 
 
     if(event.target.id == "nav-trigger" || event.target.id == "hamburger-path" || event.target.id == "hamburger" || event.target.id == "menu-icon")
     {
+        if(func == 2)
+        {
+            document.getElementById("hamburger").style.transform = "scale(1.7, 1.7)";
+            document.getElementById("hamburger").style.fill = "var(--color4)";
+
+            setTimeout(() => 
+            {
+                document.getElementById("hamburger").style.transform = "scale(1, 1)";
+                document.getElementById("hamburger").style.fill = "var(--color3)";
+
+            }, 200);
+        }
+
         document.getElementById("nav-trigger").checked = !document.getElementById("nav-trigger").checked;
         //console.log("ass");
         event.preventDefault();
     }
     else if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
     {
+        if(func == 2)
+        {
+            document.getElementById("theme-mode").style.transform = "scale(1.7, 1.7)";
+            document.getElementById("theme-mode").style.fill = "var(--color4)";
+
+            setTimeout(() => 
+            {
+                document.getElementById("theme-mode").style.transform = "scale(1, 1)";
+                document.getElementById("theme-mode").style.fill = "var(--color3)";
+                
+            }, 200);
+        }
+
+
         let blogTitle = document.getElementById("home-title");
         let theme = localStorage.getItem("theme");
 
