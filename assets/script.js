@@ -1,118 +1,57 @@
 
 window.onload = function ()
 {
-    const nav = document.getElementById("site-nav");
+    //const nav = document.getElementById("site-nav");
     const nav_trigger = document.getElementById("nav-trigger");
     const header = document.getElementById("site-header");
 
+/*
 
+
+    document.onclick = (event) =>
+    {
+        console.log(`on click: ${event.target.tagName}`);
+        quasiClick(event);
+    };
+*/
+
+
+    document.addEventListener("click", (event) => 
+    {
+        console.log(`click: ${event.target.id}`);
+
+        quasiClick(event);
+
+    }, { passive: false });
+
+
+
+/*
     document.ontouchstart = (event) => 
     {
         console.log(`touch start: ${event.target.tagName}`);
-/*
-        let elements = document.getElementsByTagName("svg");
-
-        for (let i = 0; i < elements.length; i++) 
-        {
-            elements[i].style.transform = "scale(1,1)";
-            elements[i].style.fill = "var(--color3)";
-        }
-*/
-
+        quasiClick(event);
+        event.preventDefault();
     };
+*/
+    document.addEventListener("touchstart", (event) => 
+    {
+        console.log(`touch start: ${event.target.id}`);
+        quasiClick(event);
+        //event.preventDefault();
+    }, { passive: false });
+
+
+
 
     document.ontouchend = (event) => 
     { 
         console.log(`touch end: ${event.target.tagName}`);
-
-
-        const mouseOutEvent = new MouseEvent('mouseout', {'view': window,'bubbles': true,'cancelable': true});
-        const mouseEnterEvent = new MouseEvent('mouseenter', {'view': window,'bubbles': true,'cancelable': true});
-          
-
-
-        if(event.target.tagName == "svg")
-        {
-            //event.target.style.transform = "scale(1,1)";
-            //event.target.style.fill = "var(--color3)";
-            //event.target.dispatchEvent(mouseEnterEvent);
-            //event.target.dispatchEvent(mouseOutEvent);
-            //document.body.click();
-            //console.log("ass");
-        }
-        else if(event.target.tagName == "path" || event.target.tagName == "use")
-        {
-            //event.target.parentNode.style.transform = "scale(1,1)";
-            //event.target.parentNode.style.fill = "var(--color3)";
-            //event.target.parentNode.dispatchEvent(mouseEnterEvent);
-            //event.target.parentNode.dispatchEvent(mouseOutEvent);
-            //document.body.click();
-            //console.log("ass2");
-        }
-
     };
 
     document.touchcancel = (event) => 
     {
         console.log(`touch cancel: ${event.target.tagName}`);
-    };
-
-
-    document.onclick = (event) =>
-    {
-
-        if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
-        {
-            let blogTitle = document.getElementById("home-title");
-            let theme = localStorage.getItem("theme");
-
-            if(theme == null)
-            {
-                localStorage.setItem("theme","light");
-                document.body.classList.add("light");
-                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
-                document.getElementById("sun").style.display = "none";
-                document.getElementById("moon").style.display = "inline";
-            }
-            else if(theme == "dark")
-            {
-                localStorage.setItem("theme","light");
-                
-                document.body.classList.remove("dark");
-                document.body.classList.add("light");
-
-                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
-
-                document.getElementById("sun").style.display = "none";
-                document.getElementById("moon").style.display = "inline";
-            }
-            else if(theme == "light")
-            {
-                localStorage.setItem("theme","dark");
-                
-                document.body.classList.remove("light");
-                document.body.classList.add("dark");
-
-                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
-
-                document.getElementById("sun").style.display = "inline";
-                document.getElementById("moon").style.display = "none";
-            }
-
-            event.preventDefault();
-
-
-            if(document.title == "Options")
-            {
-                location.reload(true);
-            }
-        }
-        if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
-        {
-            nav_trigger.checked = false;
-            //nav.style.boxShadow = "";
-            //event.preventDefault();
-        }
     };
 
     window.onscroll = () =>
@@ -361,5 +300,69 @@ function setTheme()
     if(theme != null)
     {
         document.body.classList.add(theme);
+    }
+}
+
+function quasiClick(event)
+{
+    const nav_trigger = document.getElementById("nav-trigger");
+
+
+    if(event.target.id == "nav-trigger" || event.target.id == "hamburger-path" || event.target.id == "hamburger" || event.target.id == "menu-icon")
+    {
+        document.getElementById("nav-trigger").checked = !document.getElementById("nav-trigger").checked;
+        //console.log("ass");
+        event.preventDefault();
+    }
+    else if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
+    {
+        let blogTitle = document.getElementById("home-title");
+        let theme = localStorage.getItem("theme");
+
+        if(theme == null)
+        {
+            localStorage.setItem("theme","light");
+            document.body.classList.add("light");
+            if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
+            document.getElementById("sun").style.display = "none";
+            document.getElementById("moon").style.display = "inline";
+        }
+        else if(theme == "dark")
+        {
+            localStorage.setItem("theme","light");
+            
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+
+            if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
+
+            document.getElementById("sun").style.display = "none";
+            document.getElementById("moon").style.display = "inline";
+        }
+        else if(theme == "light")
+        {
+            localStorage.setItem("theme","dark");
+            
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+
+            if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
+
+            document.getElementById("sun").style.display = "inline";
+            document.getElementById("moon").style.display = "none";
+        }
+
+        event.preventDefault();
+
+        if(document.title == "Options")
+        {
+            location.reload(true);
+        }
+    }
+    if(event.target.id != "nav-trigger" && event.target.id != "hamburger-path" && event.target.id != "hamburger" && event.target.id != "menu-icon")
+    {
+        nav_trigger.checked = false;
+        //nav.style.boxShadow = "";
+        //event.preventDefault();
     }
 }

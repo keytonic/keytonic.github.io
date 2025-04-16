@@ -980,7 +980,6 @@ input[type="color"]::-webkit-color-swatch {
 
 
 
-
 #hamburger:hover,
 .menu-icon:hover > svg
 {
@@ -1008,6 +1007,8 @@ input[type="color"]::-webkit-color-swatch {
 
 /*    */
 /*@media (hover: none) */
+
+/*
 @media (hover: none) or (pointer: coarse) or (pointer: fine)
 {
     #theme-mode:hover,
@@ -1050,4 +1051,4 @@ input[type="color"]::-webkit-color-swatch {
         transform: scale(2, 2);
         color: var(--color4);
     }
-}
+}*/
