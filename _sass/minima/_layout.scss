@@ -1006,7 +1006,8 @@ input[type="color"]::-webkit-color-swatch {
     }
 }
 
-@media (hover: none) 
+/*@media (hover: none) */
+@media all and (hover: none)
 {
     #theme-mode:hover,
     .menu-icon2:hover > svg
