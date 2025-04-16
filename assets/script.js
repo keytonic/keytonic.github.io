@@ -18,7 +18,7 @@ window.onload = function ()
 
     document.addEventListener("click", (event) => 
     {
-        console.log(`click: ${event.target.className}`);
+        //console.log(`click: ${event.target.class}`);
 
         quasiClick(event,1);
 
@@ -36,7 +36,7 @@ window.onload = function ()
 */
     document.addEventListener("touchstart", (event) => 
     {
-        console.log(`touch start: ${event.target.className}`);
+        //console.log(`touch start: ${event.target.className}`);
 
 
         if(event.target.className == "page-link")
@@ -57,12 +57,12 @@ window.onload = function ()
 
     document.ontouchend = (event) => 
     { 
-        console.log(`touch end: ${event.target.tagName}`);
+        //console.log(`touch end: ${event.target.tagName}`);
     };
 
     document.touchcancel = (event) => 
     {
-        console.log(`touch cancel: ${event.target.tagName}`);
+        //console.log(`touch cancel: ${event.target.tagName}`);
     };
 
     window.onscroll = () =>
@@ -402,6 +402,32 @@ function quasiClick(event,func=0)
             location.reload(true);
         }
     }
+    else if(event.target.classList.contains("svg-icon") || event.target.parentNode.classList.contains("svg-icon"))
+    {
+        //console.log("test: " + event.target.tagName);
+
+        if(func == 2)
+        {
+            let theThing =  event.target.parentNode.parentNode.querySelector("svg");
+
+            theThing.style.transition = "fill 0s";
+            theThing.style.transform = "scale(1.7, 1.7)";
+            theThing.style.fill = "var(--color4)";
+
+            setTimeout(() => 
+            {
+                theThing.style.transform = "scale(1, 1)";
+                theThing.style.fill = "var(--color3)";
+
+
+                let href = event.target.parentNode.parentNode.href || event.target.parentNode.parentNode.querySelector("a").href;
+                window.open(href,'_blank');
+            }, 200);
+
+            event.preventDefault();
+        }
+    }
+
     if(event.target.id != "nav-trigger" && event.target.id != "hamburger-path" && event.target.id != "hamburger" && event.target.id != "menu-icon")
     {
         nav_trigger.checked = false;
