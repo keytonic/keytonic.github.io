@@ -36,14 +36,14 @@
     fill: var(--color3);
 }
 
-.mylogo:hover, .mylogo:active
+.mylogo:hover
 {
     fill: var(--color4);
     transition: transform 0.3s;
     transform: scale(1.5,1.5);
 }
 
-#hamburger:hover, #hamburger:active
+#hamburger:hover
 {
     fill: var(--color4);
 }
@@ -927,6 +927,7 @@ input[type="color"]::-webkit-color-swatch {
     justify-content: center;
     align-items: center;
     margin-left: 15px;
+    cursor: pointer;
 
     @include media-query($on-palm)
     {
@@ -968,13 +969,16 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 #theme-mode:hover,
-.menu-icon2:hover > svg,
-#theme-mode:active
+.menu-icon2:hover > svg
 {
     transition: transform 0.3s;
     transform: scale(1.7, 1.7);
     fill: var(--color4);
 }
+
+
+
+
 
 
 #hamburger:hover,
@@ -999,5 +1003,49 @@ input[type="color"]::-webkit-color-swatch {
     {
         flex-direction: row-reverse;
         justify-content: flex-start;
+    }
+}
+
+@media (hover: none) 
+{
+    #theme-mode:hover,
+    .menu-icon2:hover > svg
+    {
+        transition: transform 0.3s;
+        transform: scale(1, 1);
+        fill: var(--color3);
+    }
+    #theme-mode:active,
+    .menu-icon2:active > svg
+    {
+        transition: transform 0.3s;
+        transform: scale(1.7, 1.7);
+        fill: var(--color4);
+    }
+
+    #hamburger:hover,
+    .menu-icon:hover > svg
+    {
+        transition: transform 0.3s;
+        transform: scale(1, 1);
+        fill: var(--color3);
+    }
+
+    #hamburger:active,
+    .menu-icon:active > svg
+    {
+        transition: transform 0.3s;
+        transform: scale(1.7, 1.7);
+        fill: var(--color4);
+    }
+    .social-media-list a:hover, a.u-email:hover {
+        transition: transform 0.3s;
+        transform: scale(1, 1);
+        color: var(--color3);
+    }
+    .social-media-list a:active, a.u-email:active {
+        transition: transform 0.3s;
+        transform: scale(2, 2);
+        color: var(--color4);
     }
 }

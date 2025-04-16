@@ -3,13 +3,11 @@ layout: page
 title: Options
 permalink: /options/
 ---
-
 ## **Options**
 ---
 We all have options
 
 <div id="options-output"></div>
-
 
 <script>
 
@@ -24,10 +22,18 @@ We all have options
         newInput.setAttribute("type", "color");
         //newInput.setAttribute("value", localStorage.getItem(name) == null ? "" : localStorage.getItem(name).slice(0, 7));
         //newInput.setAttribute("value", getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + name).slice(0, 7));
-        newInput.setAttribute("value", localStorage.getItem(name) == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + name).slice(0, 7) : localStorage.getItem(name).slice(0, 7));
+        //newInput.setAttribute("value", localStorage.getItem(name) == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + name).slice(0, 7) : localStorage.getItem(name).slice(0, 7));
 
+        let theme = localStorage.getItem("theme");
 
-
+        if(theme != null)
+        {
+            newInput.setAttribute("value", localStorage.getItem(name) == null ? getComputedStyle(document.querySelector('.' + theme)).getPropertyValue('--' + name).slice(0, 7) : localStorage.getItem(name).slice(0, 7));
+        }
+        else
+        {
+            newInput.setAttribute("value", localStorage.getItem(name) == null ? getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + name).slice(0, 7) : localStorage.getItem(name).slice(0, 7));
+        }
 
         if(trans != null) 
             newInput.setAttribute("trans",trans);
@@ -40,7 +46,17 @@ We all have options
             if(trans != null) newVal += trans;
 
             localStorage.setItem(name, newVal); 
-            document.querySelector(':root').style.setProperty('--' + name, newVal);
+            
+            let theme = localStorage.getItem("theme");
+
+            if(theme != null)
+            {
+                document.querySelector('.' + theme).style.setProperty('--' + name, newVal);
+            }
+            else
+            {
+                document.querySelector(':root').style.setProperty('--' + name, newVal);
+            }
         });
 
         newDiv.appendChild(newInput);
@@ -93,5 +109,5 @@ We all have options
     generateColorPicker("color1-trans2","bf", "Header & footer bg color");
 
 </script>
-
-<input type="button" value="Export" id="options-export" onclick="exportColors()">
+<input style="display: block;" type="button" value="Reset" id="options-export" onclick="localStorage.clear();location.reload(true);">
+<input style="display: block;" type="button" value="Export" id="options-export" onclick="exportColors()">

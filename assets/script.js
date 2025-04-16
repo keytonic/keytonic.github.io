@@ -8,7 +8,7 @@ window.onload = function ()
 
     document.ontouchstart = (event) => 
     {
-        console.log(`touch start: ${event.target.id}`);
+        console.log(`touch start: ${event.target.tagName}`);
 /*
         let elements = document.getElementsByTagName("svg");
 
@@ -23,13 +23,38 @@ window.onload = function ()
 
     document.ontouchend = (event) => 
     { 
-        console.log(`touch end: ${event.target.id}`);
+        console.log(`touch end: ${event.target.tagName}`);
+
+
+        const mouseOutEvent = new MouseEvent('mouseout', {'view': window,'bubbles': true,'cancelable': true});
+        const mouseEnterEvent = new MouseEvent('mouseenter', {'view': window,'bubbles': true,'cancelable': true});
+          
+
+
+        if(event.target.tagName == "svg")
+        {
+            //event.target.style.transform = "scale(1,1)";
+            //event.target.style.fill = "var(--color3)";
+            //event.target.dispatchEvent(mouseEnterEvent);
+            //event.target.dispatchEvent(mouseOutEvent);
+            //document.body.click();
+            //console.log("ass");
+        }
+        else if(event.target.tagName == "path" || event.target.tagName == "use")
+        {
+            //event.target.parentNode.style.transform = "scale(1,1)";
+            //event.target.parentNode.style.fill = "var(--color3)";
+            //event.target.parentNode.dispatchEvent(mouseEnterEvent);
+            //event.target.parentNode.dispatchEvent(mouseOutEvent);
+            //document.body.click();
+            //console.log("ass2");
+        }
 
     };
 
     document.touchcancel = (event) => 
     {
-        console.log(`touch cancel: ${event.target.id}`);
+        console.log(`touch cancel: ${event.target.tagName}`);
     };
 
 
@@ -39,17 +64,9 @@ window.onload = function ()
         if(event.target.id == "menu-icon2" || event.target.id == "theme-mode" || event.target.id == "sun" || event.target.id == "moon")
         {
             let blogTitle = document.getElementById("home-title");
+            let theme = localStorage.getItem("theme");
 
-            if(localStorage.getItem("theme") == "light")
-            {
-                localStorage.setItem("theme","dark");
-                document.body.classList.remove("light");
-                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
-                document.getElementById("sun").style.display = "inline";
-                document.getElementById("moon").style.display = "none";
-
-            }
-            else
+            if(theme == null)
             {
                 localStorage.setItem("theme","light");
                 document.body.classList.add("light");
@@ -57,7 +74,38 @@ window.onload = function ()
                 document.getElementById("sun").style.display = "none";
                 document.getElementById("moon").style.display = "inline";
             }
+            else if(theme == "dark")
+            {
+                localStorage.setItem("theme","light");
+                
+                document.body.classList.remove("dark");
+                document.body.classList.add("light");
+
+                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Light</strong>";
+
+                document.getElementById("sun").style.display = "none";
+                document.getElementById("moon").style.display = "inline";
+            }
+            else if(theme == "light")
+            {
+                localStorage.setItem("theme","dark");
+                
+                document.body.classList.remove("light");
+                document.body.classList.add("dark");
+
+                if(blogTitle != null) document.getElementById("home-title").innerHTML = "<strong>A Blog in the Dark</strong>";
+
+                document.getElementById("sun").style.display = "inline";
+                document.getElementById("moon").style.display = "none";
+            }
+
             event.preventDefault();
+
+
+            if(document.title == "Options")
+            {
+                location.reload(true);
+            }
         }
         if(event.target.id != "nav-trigger" && event.target.id != "path" && event.target.id != "hamburger")
         {
@@ -115,16 +163,17 @@ window.onload = function ()
 
     andrew.addEventListener("mouseover", () =>
     {
+        let theme = localStorage.getItem("theme");
 
-        if(localStorage.getItem("theme") == "light")
-        {
-            red = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color4');
-            grey = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color3');
-        }
-        else
+        if(theme == null)
         {
             red = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4');
             grey = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3');
+        }
+        else
+        {
+            red = getComputedStyle(document.querySelector('.' + theme)).getPropertyValue('--color4');
+            grey = getComputedStyle(document.querySelector('.' + theme)).getPropertyValue('--color3');
         }
         
         a.style.fill = red;//red
@@ -206,9 +255,23 @@ function setColorFromLocalstorage(name = null)
 
     if(color == null) return;
 
-    document.querySelector(':root').style.setProperty('--' + name, color);
+    //document.querySelector(':root').style.setProperty('--' + name, color);
 
     //console.log(`color: ${'--' + name} set to: ${color}`);
+
+
+    let theme = localStorage.getItem("theme");
+
+    if(theme != null)
+    {
+        document.querySelector('.' + theme).style.setProperty('--' + name, color);
+    }
+    else
+    {
+        document.querySelector(':root').style.setProperty('--' + name, color);
+    }
+
+
 }
 
 function setColor(name = null, color = "")
@@ -293,12 +356,10 @@ function handleSubmit(event)
 
 function setTheme()
 {
-    if(localStorage.getItem("theme") == "light")
+    let theme = localStorage.getItem("theme");
+
+    if(theme != null)
     {
-        document.body.classList.add("light");
-    }
-    else
-    {
-        document.body.classList.remove("light");
+        document.body.classList.add(theme);
     }
 }
