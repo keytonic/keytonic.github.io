@@ -18,7 +18,7 @@ window.onload = function ()
 
     document.addEventListener("click", (event) => 
     {
-        console.log(`click: ${event.target.id}`);
+        console.log(`click: ${event.target.className}`);
 
         quasiClick(event,1);
 
@@ -36,7 +36,18 @@ window.onload = function ()
 */
     document.addEventListener("touchstart", (event) => 
     {
-        console.log(`touch start: ${event.target.id}`);
+        console.log(`touch start: ${event.target.className}`);
+
+
+        if(event.target.className == "page-link")
+        {
+            window.location.href = event.target.href;
+            return;
+        }
+
+
+
+
         quasiClick(event,2);
         //event.preventDefault();
     }, { passive: false });
@@ -307,18 +318,20 @@ function quasiClick(event,func=0)
 {
     const nav_trigger = document.getElementById("nav-trigger");
 
-
     if(event.target.id == "nav-trigger" || event.target.id == "hamburger-path" || event.target.id == "hamburger" || event.target.id == "menu-icon")
     {
         if(func == 2)
         {
-            document.getElementById("hamburger").style.transform = "scale(1.7, 1.7)";
-            document.getElementById("hamburger").style.fill = "var(--color4)";
+            let theThing = document.getElementById("hamburger");
+
+            theThing.style.transition = "fill 0s";
+            theThing.style.transform = "scale(1.7, 1.7)";
+            theThing.style.fill = "var(--color4)";
 
             setTimeout(() => 
             {
-                document.getElementById("hamburger").style.transform = "scale(1, 1)";
-                document.getElementById("hamburger").style.fill = "var(--color3)";
+                theThing.style.transform = "scale(1, 1)";
+                theThing.style.fill = "var(--color3)";
 
             }, 200);
         }
@@ -331,13 +344,16 @@ function quasiClick(event,func=0)
     {
         if(func == 2)
         {
-            document.getElementById("theme-mode").style.transform = "scale(1.7, 1.7)";
-            document.getElementById("theme-mode").style.fill = "var(--color4)";
+            let theThing = document.getElementById("theme-mode");
+
+            theThing.style.transition = "fill 0s";
+            theThing.style.transform = "scale(1.7, 1.7)";
+            theThing.style.fill = "var(--color4)";
 
             setTimeout(() => 
             {
-                document.getElementById("theme-mode").style.transform = "scale(1, 1)";
-                document.getElementById("theme-mode").style.fill = "var(--color3)";
+                theThing.style.transform = "scale(1, 1)";
+                theThing.style.fill = "var(--color3)";
                 
             }, 200);
         }
