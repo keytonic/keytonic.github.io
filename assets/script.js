@@ -138,16 +138,17 @@ window.onload = function ()
 
     towner.addEventListener("mouseover", () =>
     {
+        let theme = localStorage.getItem("theme");
 
-        if(localStorage.getItem("theme") == "light")
-        {
-            red = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color4');
-            grey = getComputedStyle(document.querySelector('.light')).getPropertyValue('--color3');
-        }
-        else
+        if(theme == null)
         {
             red = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color4');
             grey = getComputedStyle(document.querySelector(':root')).getPropertyValue('--color3');
+        }
+        else
+        {
+            red = getComputedStyle(document.querySelector('.' + theme)).getPropertyValue('--color4');
+            grey = getComputedStyle(document.querySelector('.' + theme)).getPropertyValue('--color3');
         }
 
         a.style.fill = grey;//grey

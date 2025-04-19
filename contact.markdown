@@ -4,8 +4,8 @@ title: Contact
 permalink: /contact/
 ---
 
-## **Contact Me**
----
+# **Contact Me**
+
 I’d love to hear from you! Whether you have a question, feedback, or just want to connect, feel free to reach out. I’m always open to new conversations and ideas, so don’t hesitate to send a message!
 
 

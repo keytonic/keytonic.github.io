@@ -268,17 +268,18 @@ hr
     background-color: var(--color3-trans);
     xbox-shadow: 0 0 16px 4px var(--color1-trans);
     border-radius: 8px;
-    width: calc(800px - 30px* 2);
+    xwidth: calc(#{$content-width} - 30px * 2);
+    max-width: calc(#{$content-width} - 30px * 2);
 
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
 
-    @include media-query(800px) 
+    @include media-query($content-width) 
     {
         width: calc(100% - 40px);
     }
-    @include media-query(650px)
+    @include media-query($on-palm)
     {
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -323,7 +324,7 @@ hr
 }
 
 .post-header {
-  margin-bottom: $spacing-unit;
+  xmargin-bottom: $spacing-unit;
 }
 
 .post-title {
@@ -337,7 +338,7 @@ hr
 }
 
 .post-content {
-
+/*
   h2 {
     @include relative-font-size(2);
 
@@ -360,7 +361,7 @@ hr
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
-  }
+  }*/
 }
 .page-link:hover 
 {
@@ -549,11 +550,11 @@ a.flip-animate
     justify-content: space-between;
     align-items: flex-start;
 
-    @include media-query(800px) 
+    @include media-query($content-width) 
     {
 
     }
-    @include media-query(650px)
+    @include media-query($on-palm)
     {
         flex-direction: column;
         align-items: center;
@@ -583,7 +584,7 @@ a.flip-animate
     flex-direction: row;
     margin-left: 10px;
 
-    @include media-query(650px)
+    @include media-query($on-palm)
     {
         margin-left: 0px;
     }
@@ -596,7 +597,7 @@ a.flip-animate
     flex-direction: row;
     justify-content: flex-end;
 
-    @include media-query(650px)
+    @include media-query($on-palm)
     {
         justify-content: space-evenly;
     }
@@ -629,13 +630,7 @@ a.post_button:hover
     color: var(--color6);
     background-color: var(--color1);
 
-    @include media-query(650px)
-    {
-    }
-    @media screen and (min-width: 650px) 
-    {
-        xtranslate: -5px -2px 0px;
-    }
+
 }
 
 img#thumb
@@ -656,7 +651,7 @@ img#thumb:hover
 {
     padding-left: 10px;
     text-align: justify;
-    @include media-query(650px)
+    @include media-query($on-palm)
     {
         padding-top: 10px;
         xpadding-right: 10px;
@@ -786,9 +781,16 @@ input:-webkit-autofill:focus {
   transition: background-color 0s 600000s, color 0s 600000s !important;
 }
 
-#home-title
+#home-title,
+.post-title,
+#about-me,
+#contact-me
 {
     font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color2);
+    line-height: 48px;
 }
 
 .pagination
@@ -798,7 +800,7 @@ input:-webkit-autofill:focus {
     justify-content: center;
     margin: 20px;
     //width: 740px;
-    max-width: calc(800px - (30px));
+    max-width: calc(#{$content-width} - (30px));
     margin-right: auto;
     margin-left: auto;
     border-radius: 8px;

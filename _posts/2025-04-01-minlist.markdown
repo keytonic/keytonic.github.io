@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introducing MinList: A Simpler Way to Stay Organized"
+title:  "MinList.net: A Simpler Way to Stay Organized"
 date:   2025-04-01 00:00:00 -0500
 thumbnail: "/assets/minlist_post.png"
 categories: Web Development
@@ -12,15 +12,9 @@ github: https://github.com/keytonic/MinList.net
 ---
 {% comment %} 
     Thumbnails are 200x112, 16:9
-
     900x504 -> 200x112 ctrl + shift p
-
-    
 {% endcomment %}
-
 ![MinList](https://raw.githubusercontent.com/keytonic/MinList/refs/heads/main/public/images/minlist.png)
-
-## MinList: A To-Do List That Works for You
 
 <!-- excerpt-start -->[MinList](https://minlist.net) is a minimalist to-do list web app designed to keep your tasks simple and your focus clear. Whether you're managing daily errands, tracking long-term projects, or just keeping up with ideas, MinList provides a clean, distraction-free experience that lets you get things done without unnecessary complexity. <!-- excerpt-end -->Made using the following tools:
 
@@ -53,7 +47,7 @@ In a world full of overcomplicated task managers, MinList takes a different appr
 
 
 - **Installable** - Can be added to your device's home screen like a native app.
-- **Account creating** - Simple account creation or use google or facebook to login
+- **Account creation** - Simple account creation or use google or facebook to login
 
 ## Get Started
 

@@ -27,7 +27,11 @@ body {
 html
 {
     scrollbar-color: var(--color3) var(--color2);
-    scrollbar-width: thin;
+
+    @include media-query($on-palm)
+    {
+        scrollbar-width: thin;
+    }
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -66,13 +70,13 @@ li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  xfont-weight: $base-font-weight;
 }
 
 a {
   color: var(--color1);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 
   &:visited {
     color: var(--color1);
@@ -89,12 +93,15 @@ a {
 }
 
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit * 0.5;
+    padding: 8px 12px;
+  xpadding-left: $spacing-unit * 0.5;
   @include relative-font-size(1.125);
+  color: var(--color1);
+  border-left: 4px solid var(--color1);
   letter-spacing: -1px;
   font-style: italic;
+  /* background-color: var(--color6); */
+  background-image: linear-gradient(90deg, var(--color6), transparent);
 
   > :last-child {
     margin-bottom: 0;
@@ -104,9 +111,10 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: var(--color5);
+  /* border: 1px solid #e8e8e8; */
+  border-radius: 8px;
+  /* background-color: var(--color5); */
+  background-image: linear-gradient(90deg, var(--color6), transparent);
 }
 
 code {
@@ -170,21 +178,22 @@ table {
   text-align: $table-text-align;
   
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  xborder: 1px solid $grey-color-light;
+
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: var(--color3-trans);
     }
   }
   th, td {
     padding: ($spacing-unit * 0.3333333333) ($spacing-unit * 0.5);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    xbackground-color: lighten($grey-color-light, 3%);
+    xborder: 1px solid darken($grey-color-light, 4%);
+    border-bottom: 2px solid var(--color2);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border-bottom: 1px solid var(--color2);
   }
 }

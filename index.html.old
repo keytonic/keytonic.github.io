@@ -1,0 +1,30 @@
+---
+#bundle exec jekyll serve
+layout: home
+title: Blog
+#permalink: /
+---
+
+<h2 id="home-title">
+    <strong>A Blog in the Dark</strong>
+</h2>
+
+<hr />
+
+Hey there! I’m Andrew Towner, a web developer who loves turning ideas into functional, beautiful websites and apps. This blog is where I share the projects I’ve built, the challenges I’ve tackled, and the creative process behind my work. Whether it’s experimenting with new technologies, optimizing performance, or designing intuitive user experiences, I’m always building something and I can’t wait to share it with you!
+<br />
+<br />
+
+<script>
+
+let theme = localStorage.getItem("theme");
+
+if(theme != null )
+{
+    document.getElementById("home-title").innerHTML = `<strong>A Blog in the ${theme[0].toUpperCase() + theme.substring(1)}</strong>`;
+}
+
+
+
+
+</script>

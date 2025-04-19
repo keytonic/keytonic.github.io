@@ -96,7 +96,7 @@ We all have options
     }
 
     generateColorPicker("color7", null, "Form control font color");
-    generateColorPicker("color5", null, "Post title, button hover color, code and pre block bg");
+    generateColorPicker("color5", null, "Post title, code and pre block bg");
     generateColorPicker("color3", null, "Header & footer font, scroll bar, postblock buttons and sub title");
     generateColorPicker("color3-trans","bf", "Page content bg color");
     generateColorPicker("color6", null, "Post block body");
@@ -104,7 +104,7 @@ We all have options
     generateColorPicker("color4", null, "Highlight color, link hover color");
     generateColorPicker("color4-trans","80", "Header & footer border, form control select box shadow");
     generateColorPicker("color8", null, "Form controls bg color");
-    generateColorPicker("color1", null, "Body font color, scroll bar track, postblock title bg");
+    generateColorPicker("color1", null, "Body font color, scroll bar track, postblock title bg, button hover bg");
     generateColorPicker("color1-trans","80", "Header & footer box shadow");
     generateColorPicker("color1-trans2","bf", "Header & footer bg color");
 
