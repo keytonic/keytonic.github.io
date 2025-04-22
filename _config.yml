@@ -23,7 +23,7 @@ show_excerpts: true
 excerpt_separator: <!-- excerpt-end -->
 
 #gems: [jekyll-paginate]
-paginate: 6
+paginate: 2
 paginate_path: "/page:num/"
 
 

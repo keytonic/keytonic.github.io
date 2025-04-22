@@ -830,10 +830,18 @@ input:-webkit-autofill:focus {
 
 .page_number,
 .previous,
-.page_current
+.page_current,
+.next
 {
     margin-right: 10px;
 }
+
+
+.last
+{
+    margin-right: 0px;
+}
+
 
 .page_current
 {
