@@ -429,7 +429,7 @@ hr
 
         background-size: 200% 100%;
         background-position: -100%;
-        xtransition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:before
         {
@@ -443,7 +443,7 @@ hr
             z-index:0;
             position:absolute;
             background: var(--color4);
-            xtransition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         &:hover
         {
