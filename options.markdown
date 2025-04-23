@@ -4,7 +4,7 @@ title: Options
 permalink: /options/
 ---
 ## **Options**
----
+
 We all have options
 
 <div id="options-output"></div>
