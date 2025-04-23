@@ -285,7 +285,8 @@ function handleSubmit(event)
 
         http.onreadystatechange = () =>
         {
-            if (this.readyState == 4)
+            //console.log(http.readyState);
+            if (http.readyState == 4)
             {
                 event.target.classList.remove('was-validated');
                 event.target.reset();
