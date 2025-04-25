@@ -14,11 +14,10 @@ github: https://github.com/keytonic/Old-Portfolio
     Thumbnails are 200x112, 16:9
 {% endcomment %}
 
+<!-- excerpt-start -->This is an older version of [https://www.andrewtowner.com](https://www.andrewtowner.com) and is not longer being used or maintained. A showcase of my expertise, experience, and technical capabilities. It highlights my proficiency in front-end and back-end technologies, frameworks, and tools, giving potential employers or clients a clear understanding of my skills.<!-- excerpt-end -->
 
-<!-- excerpt-start -->[My personal portfolio](https://www.andrewtowner.com) is a showcase of my expertise, experience, and technical capabilities. It highlights my proficiency in front-end and back-end technologies, frameworks, and tools, giving potential employers or clients a clear understanding of my skills.<!-- excerpt-end -->
-
-- [Demo](https://andrewtowner.com)
-- [Code](https://github.com/keytonic/andrewtowner.com)
+- [Demo](https://keytonic.github.io/Old-Portfolio)
+- [Code](https://github.com/keytonic/Old-Portfolio)
 
 ## Featured Projects
 
