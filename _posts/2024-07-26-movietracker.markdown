@@ -7,7 +7,7 @@ categories: Web Development
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
-demo: https://andrewtowner.com/projects/school/CS330/Week8/final_project
+demo: https://keytonic.net/demos/school/CS330/Week8/final_project
 github:
 ---
 {% comment %} 

@@ -7,7 +7,7 @@ categories: Web Development
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
-demo: https://andrewtowner.com/projects/website/options.php
+demo: https://keytonic.net/demos/website/options.php
 github:
 ---
 {% comment %} 

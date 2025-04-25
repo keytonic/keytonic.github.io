@@ -7,7 +7,7 @@ categories: Web Development
 permalink: /:categories/:year/:month/:day/:title:output_ext
 excerpt_begin_separator: <!-- excerpt-start -->
 excerpt_separator: <!-- excerpt-end -->
-demo: https://andrewtowner.com/projects/react-examples/
+demo: https://keytonic.net/demos/react-examples/
 github:
 ---
 {% comment %} 
