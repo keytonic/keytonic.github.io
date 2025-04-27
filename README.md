@@ -1,4 +1,6 @@
 
+# I Have a Blog!
+
 I've wanted to create a blog for a long time, but I never felt like I had anything to write about. Lately, I've been working on more projects to showcase and strengthen my web development [portfolio](https://andrewtowner.com). Recently, I came across a cool static site generator written in [Ruby](https://www.ruby-lang.org/en/) called [Jekyll](https://jekyllrb.com/), and I wanted to get familiar with it. I also want to start hosting more projects on [GitHub Pages](https://pages.github.com/). With all these goals in progress or on the horizon, I thought why not create a blog using [Jekyll](https://jekyllrb.com/), [host it on GitHub](https://github.com/keytonic/keytonic.github.io), and use it to document my future projects as I complete them? And that, my friends, is exactly what we have here.
 
 - [Demo](https://www.andrewtowner.com)

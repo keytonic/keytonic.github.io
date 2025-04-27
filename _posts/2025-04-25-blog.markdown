@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "I Finally Have a Blog!"
+title:  "I Have a Blog!"
 date:   2025-04-25 00:00:00 -0500
 thumbnail: "/assets/blog_post.png"
 categories: Personal
