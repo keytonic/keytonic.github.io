@@ -10,9 +10,27 @@ excerpt_separator: <!-- excerpt-end -->
 demo:
 github:
 ---
-{% comment %} 
-    Thumbnails are 200x112, 16:9
-    900x504 -> 200x112 ctrl + shift p
-{% endcomment %}
+
+<!-- INFO
+
+- Thumbnails are 200x112, 16:9
+- 900x504 -> 200x112 ctrl + shift p
+
+-->
+
+
 
 ## Headline
+
+
+
+
+
+
+
+<!-- TODO ✓
+
+- blah
+
+-->
+
